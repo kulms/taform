@@ -191,7 +191,8 @@
     ?>
 
     $('#example1').DataTable({
-      responsive: true
+      responsive: true,
+      "pageLength": 25,
     })
     $('#example2').DataTable({
       'paging'      : true,
@@ -354,6 +355,7 @@
     $("#propose").DataTable({
       "responsive": true,
       "autoWidth": true,
+      // "pageLength": 25,
       "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
       "columnDefs": [{
         "visible": false,
