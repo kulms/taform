@@ -278,7 +278,7 @@
                             <td>".DateShortThai('2022-06-13')."</td>                          
                             <td>".DateShortThai('2022-06-20')."</td>                          
                             <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=1\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose.php?appid=1\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
                               <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
                             </td>
@@ -294,7 +294,7 @@
                             <td>".DateShortThai('2022-06-13')."</td>                          
                             <td>".DateShortThai('2022-06-20')."</td>                          
                             <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=2\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose.php?appid=2\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
                               <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
                             </td>
@@ -310,7 +310,7 @@
                             <td>".DateShortThai('2022-06-13')."</td>                          
                             <td>".DateShortThai('2022-06-20')."</td>                          
                             <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=3\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose.php?appid=3\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
                               <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
                             </td>
@@ -326,7 +326,7 @@
                             <td>".DateShortThai('2022-06-13')."</td>                          
                             <td>".DateShortThai('2022-06-20')."</td>                          
                             <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=4\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose.php?appid=4\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
                               <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
                             </td>
@@ -342,7 +342,7 @@
                             <td>".DateShortThai('2022-06-13')."</td>                          
                             <td>".DateShortThai('2022-06-20')."</td>                          
                             <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=5\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose.php?appid=5\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
                               <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
                             </td>
@@ -358,7 +358,7 @@
                             <td>".DateShortThai('2022-06-13')."</td>                          
                             <td>".DateShortThai('2022-06-20')."</td>                          
                             <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=6\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose.php?appid=6\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
                               <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
                             </td>
@@ -374,7 +374,7 @@
                             <td>".DateShortThai('2022-06-13')."</td>                          
                             <td>".DateShortThai('2022-06-20')."</td>                          
                             <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=7\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose.php?appid=7\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
                               <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
                             </td>
@@ -390,7 +390,7 @@
                             <td>".DateShortThai('2022-06-13')."</td>                          
                             <td>".DateShortThai('2022-06-20')."</td>                          
                             <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=8\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose.php?appid=8\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
                               <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
                             </td>
@@ -406,7 +406,7 @@
                             <td>".DateShortThai('2022-06-13')."</td>                          
                             <td>".DateShortThai('2022-06-20')."</td>                          
                             <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=9\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose.php?appid=9\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
                               <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
                             </td>
@@ -422,7 +422,7 @@
                             <td>".DateShortThai('2022-06-13')."</td>                          
                             <td>".DateShortThai('2022-06-20')."</td>                          
                             <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=10\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose.php?appid=10\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
                               <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
                             </td>
@@ -438,7 +438,7 @@
                             <td>".DateShortThai('2022-06-13')."</td>                          
                             <td>".DateShortThai('2022-06-20')."</td>                          
                             <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=11\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose.php?appid=11\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
                               <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
                             </td>
@@ -454,7 +454,7 @@
                             <td>".DateShortThai('2022-06-13')."</td>                          
                             <td>".DateShortThai('2022-06-20')."</td>                          
                             <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=12\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose.php?appid=12\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
                               <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
                             </td>
@@ -470,7 +470,7 @@
                             <td>".DateShortThai('2022-06-13')."</td>                          
                             <td>".DateShortThai('2022-06-20')."</td>                          
                             <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=13\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose.php?appid=13\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
                               <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
                             </td>
@@ -486,7 +486,7 @@
                             <td>".DateShortThai('2022-06-13')."</td>                          
                             <td>".DateShortThai('2022-06-20')."</td>                          
                             <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=14\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose.php?appid=14\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
                               <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
                             </td>
@@ -502,7 +502,7 @@
                             <td>".DateShortThai('2022-06-13')."</td>                          
                             <td>".DateShortThai('2022-06-20')."</td>                          
                             <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=15\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose.php?appid=15\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
                               <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
                             </td>
@@ -518,7 +518,7 @@
                             <td>".DateShortThai('2022-06-13')."</td>                          
                             <td>".DateShortThai('2022-06-20')."</td>                          
                             <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=16\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose.php?appid=16\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
                               <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
                             </td>
@@ -534,7 +534,7 @@
                             <td>".DateShortThai('2022-06-13')."</td>                          
                             <td>".DateShortThai('2022-06-20')."</td>                          
                             <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=17\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose.php?appid=17\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
                               <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
                             </td>
@@ -550,7 +550,7 @@
                             <td>".DateShortThai('2022-06-13')."</td>                          
                             <td>".DateShortThai('2022-06-20')."</td>                          
                             <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=18\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose.php?appid=18\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
                               <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
                             </td>
@@ -566,7 +566,7 @@
                             <td>".DateShortThai('2022-06-13')."</td>                          
                             <td>".DateShortThai('2022-06-20')."</td>                          
                             <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=19\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose.php?appid=19\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
                               <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
                             </td>
@@ -582,7 +582,7 @@
                             <td>".DateShortThai('2022-06-13')."</td>                          
                             <td>".DateShortThai('2022-06-20')."</td>                          
                             <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=20\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose.php?appid=20\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
                               <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
                             </td>
@@ -598,7 +598,7 @@
                             <td>".DateShortThai('2022-06-13')."</td>                          
                             <td>".DateShortThai('2022-06-20')."</td>                          
                             <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=21\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose.php?appid=21\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
                               <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
                             </td>
@@ -614,7 +614,7 @@
                             <td>".DateShortThai('2022-06-13')."</td>                          
                             <td>".DateShortThai('2022-06-20')."</td>                          
                             <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=22\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose.php?appid=22\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
                               <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
                             </td>
