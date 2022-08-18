@@ -102,7 +102,79 @@
                 <tbody>
                 <tr>
                   <td width="12%" class="th-left-color">หน่วยงาน</td>
-                  <td width="38%"><?php echo "ภาควิชาวิศวกรรมการบินและอวกาศ";?></td>                  
+                  <td width="38%">
+                  <?php 
+                      switch($app_id){
+                        case "1":
+                            echo "ภาควิชาวิศวกรรมการบินและอวกาศ";
+                          break;
+                        case "2":
+                            echo "ภาควิชาวิศวกรรมเครื่องกล";
+                          break;
+                        case "3":
+                            echo "ภาควิชาวิศวกรรมเคมี";
+                          break;
+                        case "4":
+                            echo "ภาควิชาวิศวกรรมคอมพิวเตอร์";
+                          break;
+                        case "5":
+                            echo "ภาควิชาวิศวกรรมไฟฟ้า";
+                          break;
+                        case "6":
+                            echo "ภาควิชาวิศวกรรมทรัพยากรน้ำ";
+                          break;
+                        case "7":
+                            echo "ภาควิชาวิศวกรรมโยธา";
+                          break;
+                        case "8":
+                            echo "ภาควิชาวิศวกรรมสิ่งแวดล้อม";
+                          break;
+                        case "9":
+                            echo "ภาควิชาวิศวกรรมอุตสาหการ";
+                          break;
+                        case "10":
+                            echo "ภาควิชาวิศวกรรมวัสดุ";
+                          break;
+                        case "11":
+                            echo "ส่วนกลางคณะฯ";
+                          break;
+                        case "12":
+                            echo "ภาควิชาวิศวกรรมการบินและอวกาศ";
+                          break;
+                        case "13":
+                            echo "ภาควิชาวิศวกรรมเครื่องกล";
+                          break;
+                        case "14":
+                            echo "ภาควิชาวิศวกรรมเคมี";
+                          break;
+                        case "15":
+                            echo "ภาควิชาวิศวกรรมคอมพิวเตอร์";
+                          break;
+                        case "16":
+                            echo "ภาควิชาวิศวกรรมไฟฟ้า";
+                          break;
+                        case "17":
+                            echo "ภาควิชาวิศวกรรมทรัพยากรน้ำ";
+                          break;
+                        case "18":
+                            echo "ภาควิชาวิศวกรรมโยธา";
+                          break;
+                        case "19":
+                            echo "ภาควิชาวิศวกรรมสิ่งแวดล้อม";
+                          break;
+                        case "20":
+                            echo "ภาควิชาวิศวกรรมอุตสาหการ";
+                          break;
+                        case "21":
+                            echo "ภาควิชาวิศวกรรมวัสดุ";
+                          break;
+                        case "22":
+                            echo "ส่วนกลางคณะฯ";
+                          break;
+                      }
+                      
+                    ?>
+                  </td>                  
                   <td width="12%" >&nbsp;</td>
                   <td width="38%"><?php // echo $row["app_doc_no"];?></td>
                 </tr>                                                
@@ -280,6 +352,231 @@
                             </tr>
                             ";
                             break;
+                          case "6":
+                            echo "
+                            <tr>
+                                <td class='hidden'></td>
+                                <td>1</td>
+                                <td>นายพลาวัสถ์ ส่งพันธ์นธีกูร</td>
+                                <td></td>                          
+                                <td>ปริญญาโท</td>
+                                <td>4</td>                        
+                                <td></td>                        
+                                <td></td>                        
+                            </tr>
+                            ";
+                            break;
+                          case "7":
+                            echo "
+                            <tr>
+                                <td class='hidden'></td>
+                                <td>1</td>
+                                <td>นายสุรงค์กร  เพชรรักษ์</td>
+                                <td></td>                          
+                                <td>ปริญญาเอก</td>
+                                <td>2</td>
+                                <td></td>                        
+                                <td></td>                        
+                            </tr>
+                            ";
+                            break;
+                          case "8":
+                            echo "
+                            <tr>
+                                <td class='hidden'></td>
+                                <td>1</td>
+                                <td>นางสาววาริณีย์  สุวรรณรักษ์</td>
+                                <td></td>                          
+                                <td>ปริญญาโท</td>
+                                <td>2</td>
+                                <td></td>                        
+                                <td></td>                        
+                            </tr>
+                            ";
+                            break;
+                          case "9":
+                            echo "
+                            <tr>
+                                <td class='hidden'></td>
+                                <td>1</td>
+                                <td>นายวุส  ทาแก้ว</td>
+                                <td></td>                          
+                                <td>ปริญญาโท</td>
+                                <td>2</td>
+                                <td></td>                        
+                                <td></td>                        
+                            </tr>
+                            ";
+                            break;
+                          case "10":
+                            echo "
+                            <tr>
+                                <td class='hidden'></td>
+                                <td>1</td>
+                                <td>นายภคนันท์  วัฒนสินบำรุง</td>
+                                <td></td>                          
+                                <td>ปริญญาเอก</td>
+                                <td>1</td>
+                                <td></td>                        
+                                <td></td>                        
+                            </tr>
+                            ";
+                            break;
+                          case "11":
+                            echo "
+                            <tr>
+                                <td class='hidden'></td>
+                                <td>1</td>
+                                <td>นายฐิติศักดิ์  อัศวรางกูร</td>
+                                <td></td>                          
+                                <td>ปริญญาโท</td>
+                                <td>3</td>
+                                <td></td>                        
+                                <td></td>                        
+                            </tr>
+                            ";
+                            break;
+                          case "12":
+                            echo "
+                            <tr>
+                                <td class='hidden'></td>
+                                <td>1</td>
+                                <td>นายเอื้ออังกูร  มูลรังษี</td>
+                                <td></td>                          
+                                <td>ปริญญาโท</td>
+                                <td>2</td>
+                                <td></td>                        
+                                <td></td>                        
+                            </tr>
+                            ";
+                            break;
+                          case "13":
+                            echo "
+                            <tr>
+                                <td class='hidden'></td>
+                                <td>1</td>
+                                <td>นายกฤษฎิ์  ใหม่เอี่ยม</td>
+                                <td></td>                          
+                                <td>ปริญญาโท</td>
+                                <td>2</td>
+                                <td></td>                        
+                                <td></td>                        
+                            </tr>
+                            ";
+                            break;
+                          case "14":
+                            echo "
+                            <tr>
+                                <td class='hidden'></td>
+                                <td>1</td>
+                                <td>นายพัชรากร  ศิริโยทัย</td>
+                                <td></td>                          
+                                <td>ปริญญาเอก</td>
+                                <td>1</td>
+                                <td></td>                        
+                                <td></td>                        
+                            </tr>
+                            ";
+                            break;
+                          case "15":
+                            echo "
+                            <tr>
+                                <td class='hidden'></td>
+                                <td>1</td>
+                                <td>นางสาวศนทกานต์  เหลืองวิเศษ</td>
+                                <td></td>                          
+                                <td>ปริญญาโท</td>
+                                <td>3</td>
+                                <td></td>                        
+                                <td></td>                        
+                            </tr>
+                            ";
+                            break;
+                          case "16":
+                            echo "
+                            <tr>
+                                <td class='hidden'></td>
+                                <td>1</td>
+                                <td>นายณัฐพงษ์  พรมพิทักษ์</td>
+                                <td></td>                          
+                                <td>ปริญญาโท</td>
+                                <td>2</td>
+                                <td></td>                        
+                                <td></td>                        
+                            </tr>
+                            ";
+                            break;
+                          case "17":
+                            echo "
+                            <tr>
+                                <td class='hidden'></td>
+                                <td>1</td>
+                                <td>นางสาวฑิฆันพร  จิตภักดี</td>
+                                <td></td>                          
+                                <td>ปริญญาโท</td>
+                                <td>4</td>
+                                <td></td>                        
+                                <td></td>                        
+                            </tr>
+                            ";
+                            break;
+                          case "18":
+                            echo "
+                            <tr>
+                                <td class='hidden'></td>
+                                <td>1</td>
+                                <td>นางสาวพิมพ์นิภา  อุมัยชัย</td>
+                                <td></td>                          
+                                <td>ปริญญาโท</td>
+                                <td>1</td>
+                                <td></td>                        
+                                <td></td>                        
+                            </tr>
+                            ";
+                            break;
+                          case "19":
+                            echo "
+                            <tr>
+                                <td class='hidden'></td>
+                                <td>1</td>
+                                <td>นายอาณกร  ทองบาง</td>
+                                <td></td>                          
+                                <td>ปริญญาโท</td>
+                                <td>1</td>
+                                <td></td>                        
+                                <td></td>                        
+                            </tr>
+                            ";
+                            break;
+                          case "20":
+                            echo "
+                            <tr>
+                                <td class='hidden'></td>
+                                <td>1</td>
+                                <td>นายสิทธ์ชัย  ปัทมารัตน์</td>
+                                <td></td>                          
+                                <td>ปริญญาตรี</td>
+                                <td>4</td>
+                                <td></td>                        
+                                <td></td>                        
+                            </tr>
+                            ";
+                            break;
+                          case "21":
+                            echo "
+                            <tr>
+                                <td class='hidden'></td>
+                                <td>1</td>
+                                <td>นายจิระศักดิ์  แซ่ตัน</td>
+                                <td></td>                          
+                                <td>ปริญญาโท</td>
+                                <td>2</td>
+                                <td></td>                        
+                                <td></td>                        
+                            </tr>
+                            ";
+                            break;
+
                     }
                     
                   ?>
@@ -512,6 +809,294 @@
                                 </tr>
                             ";
                             break;
+                        case "6":
+                          echo "
+                              <tr>
+                              <td class='hidden'></td>
+                              <td>1</td>                        
+                              <td>01208111</td>                          
+                              <td>5</td>
+                              <td>43</td>
+                              <td>3,340</td>
+                              <td>3.60</td>
+                              <td></td>
+                              <td>
+                                  <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขรายวิชา</button>
+                                  <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบรายวิชา</button>
+                              </td>
+                              </tr>
+                          ";
+                          break;
+                        case "7":
+                          echo "
+                              <tr>
+                              <td class='hidden'></td>
+                              <td>1</td>                        
+                              <td>01208426</td>                          
+                              <td>1, 250</td>
+                              <td>23, 10</td>
+                              <td>3,340</td>
+                              <td>4.00</td>
+                              <td></td>
+                              <td>
+                                  <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขรายวิชา</button>
+                                  <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบรายวิชา</button>
+                              </td>
+                              </tr>
+                          ";
+                          break;
+                        case "8":
+                          echo "
+                              <tr>
+                              <td class='hidden'></td>
+                              <td>1</td>                        
+                              <td>01208322</td>                          
+                              <td>2, 251</td>
+                              <td>35, 22</td>
+                              <td>3,340</td>
+                              <td>4.00</td>
+                              <td></td>
+                              <td>
+                                  <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขรายวิชา</button>
+                                  <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบรายวิชา</button>
+                              </td>
+                              </tr>
+                          ";
+                          break;
+                        case "9":
+                          echo "
+                              <tr>
+                              <td class='hidden'></td>
+                              <td>1</td>                        
+                              <td>01208201, 01208577</td>                          
+                              <td>1</td>
+                              <td>60</td>
+                              <td>3,340</td>
+                              <td>3.58</td>
+                              <td></td>
+                              <td>
+                                  <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขรายวิชา</button>
+                                  <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบรายวิชา</button>
+                              </td>
+                              </tr>
+                          ";
+                          break;
+                        case "10":
+                          echo "
+                              <tr>
+                              <td class='hidden'></td>
+                              <td>1</td>                        
+                              <td>01211331</td>                          
+                              <td>1, 250</td>
+                              <td>33, 25</td>
+                              <td>3,340</td>
+                              <td>4.00</td>
+                              <td></td>
+                              <td>
+                                  <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขรายวิชา</button>
+                                  <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบรายวิชา</button>
+                              </td>
+                              </tr>
+                          ";
+                          break;
+                        case "11":
+                          echo "
+                              <tr>
+                              <td class='hidden'></td>
+                              <td>1</td>                        
+                              <td>01208499</td>                          
+                              <td>1, 250</td>
+                              <td>28</td>
+                              <td>3,340</td>
+                              <td>3.86</td>
+                              <td></td>
+                              <td>
+                                  <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขรายวิชา</button>
+                                  <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบรายวิชา</button>
+                              </td>
+                              </tr>
+                          ";
+                          break;
+                        case "12":
+                          echo "
+                              <tr>
+                              <td class='hidden'></td>
+                              <td>1</td>                        
+                              <td>01211499</td>                          
+                              <td>1, 250</td>
+                              <td>28</td>
+                              <td>3,340</td>
+                              <td>3.41</td>
+                              <td></td>
+                              <td>
+                                  <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขรายวิชา</button>
+                                  <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบรายวิชา</button>
+                              </td>
+                              </tr>
+                          ";
+                          break;
+                        case "13":
+                          echo "
+                              <tr>
+                              <td class='hidden'></td>
+                              <td>1</td>                        
+                              <td>01208111</td>                          
+                              <td>4, 14</td>
+                              <td>60</td>
+                              <td>3,340</td>
+                              <td>3.86</td>
+                              <td></td>
+                              <td>
+                                  <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขรายวิชา</button>
+                                  <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบรายวิชา</button>
+                              </td>
+                              </tr>
+                          ";
+                          break;
+                        case "14":
+                          echo "
+                              <tr>
+                              <td class='hidden'></td>
+                              <td>1</td>                        
+                              <td>01208351</td>                          
+                              <td>1, 2, 250, 251</td>
+                              <td>38, 55, 50, 28</td>
+                              <td>3,340</td>
+                              <td>4.00</td>
+                              <td></td>
+                              <td>
+                                  <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขรายวิชา</button>
+                                  <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบรายวิชา</button>
+                              </td>
+                              </tr>
+                          ";
+                          break;
+                        case "15":
+                          echo "
+                              <tr>
+                              <td class='hidden'></td>
+                              <td>1</td>                        
+                              <td>01208111</td>                          
+                              <td>1</td>
+                              <td>60</td>
+                              <td>3,340</td>
+                              <td>4.00</td>
+                              <td></td>
+                              <td>
+                                  <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขรายวิชา</button>
+                                  <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบรายวิชา</button>
+                              </td>
+                              </tr>
+                          ";
+                          break;
+                        case "16":
+                          echo "
+                              <tr>
+                              <td class='hidden'></td>
+                              <td>1</td>                        
+                              <td>01211322</td>                          
+                              <td>1, 250</td>
+                              <td>34, 9</td>
+                              <td>3,340</td>
+                              <td>3.60</td>
+                              <td></td>
+                              <td>
+                                  <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขรายวิชา</button>
+                                  <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบรายวิชา</button>
+                              </td>
+                              </tr>
+                          ";
+                          break;
+                        case "17":
+                          echo "
+                              <tr>
+                              <td class='hidden'></td>
+                              <td>1</td>                        
+                              <td>01211322</td>                          
+                              <td>1, 250</td>
+                              <td>34, 9</td>
+                              <td>3,340</td>
+                              <td>3.20</td>
+                              <td></td>
+                              <td>
+                                  <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขรายวิชา</button>
+                                  <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบรายวิชา</button>
+                              </td>
+                              </tr>
+                          ";
+                          break;
+                        case "18":
+                          echo "
+                              <tr>
+                              <td class='hidden'></td>
+                              <td>1</td>                        
+                              <td>01211497</td>                          
+                              <td>1, 250</td>
+                              <td>36, 32</td>
+                              <td>3,340</td>
+                              <td>4.00</td>
+                              <td></td>
+                              <td>
+                                  <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขรายวิชา</button>
+                                  <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบรายวิชา</button>
+                              </td>
+                              </tr>
+                          ";
+                          break;
+                        case "19":
+                          echo "
+                              <tr>
+                              <td class='hidden'></td>
+                              <td>1</td>                        
+                              <td>01211497</td>                          
+                              <td>1, 250</td>
+                              <td>36, 32</td>
+                              <td>3,340</td>
+                              <td>4.00</td>
+                              <td></td>
+                              <td>
+                                  <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขรายวิชา</button>
+                                  <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบรายวิชา</button>
+                              </td>
+                              </tr>
+                          ";
+                          break;
+                        case "20":
+                          echo "
+                              <tr>
+                              <td class='hidden'></td>
+                              <td>1</td>                        
+                              <td>01211311</td>                          
+                              <td>1, 250</td>
+                              <td>40, 40</td>
+                              <td>3,340</td>
+                              <td>2.87</td>
+                              <td></td>
+                              <td>
+                                  <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขรายวิชา</button>
+                                  <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบรายวิชา</button>
+                              </td>
+                              </tr>
+                          ";
+                          break;
+                        case "21":
+                          echo "
+                              <tr>
+                              <td class='hidden'></td>
+                              <td>1</td>                        
+                              <td>01208322</td>                          
+                              <td>1, 250</td>
+                              <td>24, 27</td>
+                              <td>3,340</td>
+                              <td>3.86</td>
+                              <td></td>
+                              <td>
+                                  <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขรายวิชา</button>
+                                  <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบรายวิชา</button>
+                              </td>
+                              </tr>
+                          ";
+                          break;
                     }
                   ?>
                 </tbody>                             

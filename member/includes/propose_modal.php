@@ -5,7 +5,7 @@
           	<div class="modal-header">
             	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
               		<span aria-hidden="true">&times;</span></button>
-            	<h4 class="modal-title"><b>Add Approval Member</b></h4>
+            	<h4 class="modal-title"><b>เพิ่มรายชื่อผู้ช่วยสอน</b></h4>
           	</div>
 			<form class="form-horizontal" method="POST" action="approval_add.php">
 				<input type="hidden" id="app_id" name="app_id" value="<?php echo $app_id;?>">  
@@ -73,7 +73,7 @@
 						</div>
 					</div> -->
                     <div class="form-group">
-						<label for="app_head_position" class="col-sm-3 control-label">Import File</label>
+						<label for="app_head_position" class="col-sm-3 control-label">File รายชื่อผู้ช่วยสอน</label>
 						<div class="col-sm-9">
                         <input type="file" class="form-control col-sm-8" id="finger_file" name="finger_file" required>
 						</div>
@@ -137,7 +137,7 @@
                   	</div>
                 </div> -->
 				<div class="form-group">
-					<label for="edit_emp_id" class="col-sm-3 control-label">เจ้าหน้าที่</label>
+					<label for="edit_emp_id" class="col-sm-3 control-label">ผู้ช่วยสอน</label>
 					<div class="col-sm-9">
 					<?php //echo $_SESSION['deptid']." ".$app_id;?>
 					<select class="form-control" name="edit_emp_id" id="edit_emp_id" required>
@@ -204,7 +204,7 @@
 					<input type="hidden" id="app_id" name="app_id" value="<?php echo $app_id;?>">
 					<input type="hidden" id="del_appe_id" name="del_app_eid">
             		<div class="form-group">
-					<label for="del_emp_id" class="col-sm-3 control-label">เจ้าหน้าที่</label>
+					<label for="del_emp_id" class="col-sm-3 control-label">ผู้ช่วยสอน</label>
 					<div class="col-sm-9">
 					<?php //echo $_SESSION['deptid']." ".$app_id;?>
 					<select class="form-control" name="del_emp_id" id="del_emp_id" required readonly>

@@ -398,6 +398,39 @@
       }
     })
     //------------------------------------------------------
+    $("#order").DataTable({
+      "responsive": true,
+      "autoWidth": true,
+      "columnDefs": [{
+        "visible": false,
+        "targets": [1,2]
+      }],
+      //"order": [[ 0, 'asc' ],[ 1, 'asc' ],[ 3, 'asc' ],[ 4, 'asc' ]],
+      "order": [
+        [1, 'asc']
+      ],
+      "displayLength": -1,
+      // "drawCallback": function (settings) {
+      //   var api = this.api();
+      //   var rows = api.rows({
+      //     page: 'current'
+      //   }).nodes();
+      //   var last = null;
+
+      //   api.column(3, {
+      //     page: 'current'
+      //   }).data().each(function (group, i) {
+      //     if (last !== group) {
+      //       $(rows).eq(i).before(
+      //         '<tr class="group"><td colspan=8"><h4 style="color:#b0081c">' + group + '</h4></td></tr>'
+      //       );
+
+      //       last = group;
+      //     }
+      //   });
+      // }
+    })
+    //------------------------------------------------------
     $("#example7").DataTable({
       "responsive": true,
       "autoWidth": true,

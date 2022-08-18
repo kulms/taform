@@ -373,11 +373,11 @@
                           <tr>
                             <td class='hidden'></td>
                             <td>1</td>
-                            <td>นายกิตติภณ ฝ่ายเดช</td>
+                            <td>นายพลาวัสถ์ ส่งพันธ์นธีกูร</td>
                             <td></td>                          
-                            <td>ปริญญาตรี</td>
-                            <td>3</td>
-                            <td>2,505</td>
+                            <td>ปริญญาโท</td>
+                            <td>4</td>
+                            <td>3,340</td>
                             <td>
                               <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=6&appid=2&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
@@ -389,11 +389,11 @@
                           <tr>
                             <td class='hidden'></td>
                             <td>2</td>
-                            <td>นางสาวสโรชา เจตะวัฒนะ</td>
+                            <td>นายสุรงค์กร  เพชรรักษ์</td>
                             <td></td>                          
-                            <td>ปริญญาตรี</td>
-                            <td>3</td>
-                            <td>2,505</td>
+                            <td>ปริญญาเอก</td>
+                            <td>2</td>
+                            <td>3,340</td>
                             <td>
                               <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=7&appid=2&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
@@ -405,11 +405,11 @@
                           <tr>
                             <td class='hidden'></td>
                             <td>3</td>
-                            <td>นางสาวนวลพรรณ ชัยศร</td>
+                            <td>นางสาววาริณีย์  สุวรรณรักษ์</td>
                             <td></td>                          
-                            <td>ปริญญาตรี</td>
-                            <td>4</td>
-                            <td>2,505</td>
+                            <td>ปริญญาโท</td>
+                            <td>2</td>
+                            <td>3,340</td>
                             <td>
                               <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=8&appid=2&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
@@ -421,11 +421,11 @@
                           <tr>
                             <td class='hidden'></td>
                             <td>4</td>
-                            <td>นายปิติพล เกื้อกูล</td>
+                            <td>นายวุส  ทาแก้ว</td>
                             <td></td>                          
-                            <td>ปริญญาตรี</td>
-                            <td>4</td>
-                            <td>2,505</td>
+                            <td>ปริญญาโท</td>
+                            <td>2</td>
+                            <td>3,340</td>
                             <td>
                               <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=9&appid=2&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
@@ -437,11 +437,11 @@
                           <tr>
                             <td class='hidden'></td>
                             <td>5</td>
-                            <td>นายโชติพัชร กสิกรรม</td>
+                            <td>นายภคนันท์  วัฒนสินบำรุง</td>
                             <td></td>                          
-                            <td>ปริญญาตรี</td>
-                            <td>4</td>
-                            <td>2,505</td>
+                            <td>ปริญญาเอก</td>
+                            <td>1</td>
+                            <td>3,340</td>
                             <td>
                               <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=10&appid=2&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
@@ -453,11 +453,11 @@
                           <tr>
                             <td class='hidden'></td>
                             <td>6</td>
-                            <td>นายโชติพัชร กสิกรรม</td>
+                            <td>นายฐิติศักดิ์  อัศวรางกูร</td>
                             <td></td>                          
-                            <td>ปริญญาตรี</td>
-                            <td>4</td>
-                            <td>2,505</td>
+                            <td>ปริญญาโท</td>
+                            <td>3</td>
+                            <td>3,340</td>
                             <td>
                               <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=11&appid=2&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
@@ -469,11 +469,11 @@
                           <tr>
                             <td class='hidden'></td>
                             <td>7</td>
-                            <td>นายโชติพัชร กสิกรรม</td>
+                            <td>นายเอื้ออังกูร  มูลรังษี</td>
                             <td></td>                          
-                            <td>ปริญญาตรี</td>
-                            <td>4</td>
-                            <td>2,505</td>
+                            <td>ปริญญาโท</td>
+                            <td>2</td>
+                            <td>3,340</td>
                             <td>
                               <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=12&appid=2&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
@@ -485,11 +485,11 @@
                           <tr>
                             <td class='hidden'></td>
                             <td>8</td>
-                            <td>นายโชติพัชร กสิกรรม</td>
+                            <td>นายกฤษฎิ์  ใหม่เอี่ยม</td>
                             <td></td>                          
-                            <td>ปริญญาตรี</td>
-                            <td>4</td>
-                            <td>2,505</td>
+                            <td>ปริญญาโท</td>
+                            <td>2</td>
+                            <td>3,340</td>
                             <td>
                               <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=13&appid=2&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
@@ -501,11 +501,11 @@
                           <tr>
                             <td class='hidden'></td>
                             <td>9</td>
-                            <td>นายกิตติภณ ฝ่ายเดช</td>
+                            <td>นายพัชรากร  ศิริโยทัย</td>
                             <td></td>                          
-                            <td>ปริญญาตรี</td>
-                            <td>3</td>
-                            <td>2,505</td>
+                            <td>ปริญญาเอก</td>
+                            <td>1</td>
+                            <td>3,340</td>
                             <td>
                               <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=14&appid=2&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
@@ -517,11 +517,11 @@
                           <tr>
                             <td class='hidden'></td>
                             <td>10</td>
-                            <td>นางสาวสโรชา เจตะวัฒนะ</td>
+                            <td>นางสาวศนทกานต์  เหลืองวิเศษ</td>
                             <td></td>                          
-                            <td>ปริญญาตรี</td>
+                            <td>ปริญญาโท</td>
                             <td>3</td>
-                            <td>2,505</td>
+                            <td>3,340</td>
                             <td>
                               <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=15&appid=2&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
@@ -533,11 +533,11 @@
                           <tr>
                             <td class='hidden'></td>
                             <td>11</td>
-                            <td>นางสาวนวลพรรณ ชัยศร</td>
+                            <td>นายณัฐพงษ์  พรมพิทักษ์</td>
                             <td></td>                          
-                            <td>ปริญญาตรี</td>
-                            <td>4</td>
-                            <td>2,505</td>
+                            <td>ปริญญาโท</td>
+                            <td>2</td>
+                            <td>3,340</td>
                             <td>
                               <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=16&appid=2&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
@@ -549,11 +549,11 @@
                           <tr>
                             <td class='hidden'></td>
                             <td>12</td>
-                            <td>นายปิติพล เกื้อกูล</td>
+                            <td>นางสาวฑิฆันพร  จิตภักดี</td>
                             <td></td>                          
-                            <td>ปริญญาตรี</td>
+                            <td>ปริญญาโท</td>
                             <td>4</td>
-                            <td>2,505</td>
+                            <td>3,340</td>
                             <td>
                               <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=17&appid=2&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
@@ -565,11 +565,11 @@
                           <tr>
                             <td class='hidden'></td>
                             <td>13</td>
-                            <td>นายโชติพัชร กสิกรรม</td>
+                            <td>นางสาวพิมพ์นิภา  อุมัยชัย</td>
                             <td></td>                          
-                            <td>ปริญญาตรี</td>
-                            <td>4</td>
-                            <td>2,505</td>
+                            <td>ปริญญาโท</td>
+                            <td>1</td>
+                            <td>3,340</td>
                             <td>
                               <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=18&appid=2&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
@@ -581,11 +581,11 @@
                           <tr>
                             <td class='hidden'></td>
                             <td>14</td>
-                            <td>นายโชติพัชร กสิกรรม</td>
+                            <td>นายอาณกร  ทองบาง</td>
                             <td></td>                          
-                            <td>ปริญญาตรี</td>
-                            <td>4</td>
-                            <td>2,505</td>
+                            <td>ปริญญาโท</td>
+                            <td>1</td>
+                            <td>3,340</td>
                             <td>
                               <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=19&appid=2&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
@@ -597,7 +597,7 @@
                           <tr>
                             <td class='hidden'></td>
                             <td>15</td>
-                            <td>นายโชติพัชร กสิกรรม</td>
+                            <td>นายสิทธ์ชัย  ปัทมารัตน์</td>
                             <td></td>                          
                             <td>ปริญญาตรี</td>
                             <td>4</td>
@@ -613,11 +613,11 @@
                           <tr>
                             <td class='hidden'></td>
                             <td>16</td>
-                            <td>นายโชติพัชร กสิกรรม</td>
+                            <td>นายจิระศักดิ์  แซ่ตัน</td>
                             <td></td>                          
-                            <td>ปริญญาตรี</td>
-                            <td>4</td>
-                            <td>2,505</td>
+                            <td>ปริญญาโท</td>
+                            <td>2</td>
+                            <td>3,340</td>
                             <td>
                               <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=21&appid=2&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
                               <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>

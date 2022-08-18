@@ -76,7 +76,79 @@
                 <tbody>
                 <tr>
                   <td width="12%" class="th-left-color">หน่วยงาน</td>
-                  <td width="38%"><?php echo "ภาควิชาวิศวกรรมการบินและอวกาศ";?></td>                  
+                  <td width="38%">
+                  <?php 
+                      switch($app_id){
+                        case "1":
+                            echo "ภาควิชาวิศวกรรมการบินและอวกาศ";
+                          break;
+                        case "2":
+                            echo "ภาควิชาวิศวกรรมเครื่องกล";
+                          break;
+                        case "3":
+                            echo "ภาควิชาวิศวกรรมเคมี";
+                          break;
+                        case "4":
+                            echo "ภาควิชาวิศวกรรมคอมพิวเตอร์";
+                          break;
+                        case "5":
+                            echo "ภาควิชาวิศวกรรมไฟฟ้า";
+                          break;
+                        case "6":
+                            echo "ภาควิชาวิศวกรรมทรัพยากรน้ำ";
+                          break;
+                        case "7":
+                            echo "ภาควิชาวิศวกรรมโยธา";
+                          break;
+                        case "8":
+                            echo "ภาควิชาวิศวกรรมสิ่งแวดล้อม";
+                          break;
+                        case "9":
+                            echo "ภาควิชาวิศวกรรมอุตสาหการ";
+                          break;
+                        case "10":
+                            echo "ภาควิชาวิศวกรรมวัสดุ";
+                          break;
+                        case "11":
+                            echo "ส่วนกลางคณะฯ";
+                          break;
+                        case "12":
+                            echo "ภาควิชาวิศวกรรมการบินและอวกาศ";
+                          break;
+                        case "13":
+                            echo "ภาควิชาวิศวกรรมเครื่องกล";
+                          break;
+                        case "14":
+                            echo "ภาควิชาวิศวกรรมเคมี";
+                          break;
+                        case "15":
+                            echo "ภาควิชาวิศวกรรมคอมพิวเตอร์";
+                          break;
+                        case "16":
+                            echo "ภาควิชาวิศวกรรมไฟฟ้า";
+                          break;
+                        case "17":
+                            echo "ภาควิชาวิศวกรรมทรัพยากรน้ำ";
+                          break;
+                        case "18":
+                            echo "ภาควิชาวิศวกรรมโยธา";
+                          break;
+                        case "19":
+                            echo "ภาควิชาวิศวกรรมสิ่งแวดล้อม";
+                          break;
+                        case "20":
+                            echo "ภาควิชาวิศวกรรมอุตสาหการ";
+                          break;
+                        case "21":
+                            echo "ภาควิชาวิศวกรรมวัสดุ";
+                          break;
+                        case "22":
+                            echo "ส่วนกลางคณะฯ";
+                          break;
+                      }
+                      
+                    ?>
+                  </td>                  
                   <td width="12%" >&nbsp;</td>
                   <td width="38%"><?php //echo $row["app_doc_no"];?></td>
                 </tr>                                                
@@ -219,15 +291,13 @@
                           <tr>
                             <td class='hidden'></td>
                             <td>1</td>
-                            <td>นางสาวสุวรินทร์ พัฒนาชวนชม</td>
-                            <td>6210505619</td>                          
+                            <td>นายกิตติภณ ฝ่ายเดช</td>
+                            <td></td>                          
                             <td>ปริญญาตรี</td>
                             <td>3</td>
-                            <td>1,200</td>
+                            <td>2,505</td>
                             <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval_ot.php?appeid=1&appid=1&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=1&appid=1&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
                             </td>
                           </tr>
                         ";
@@ -235,15 +305,13 @@
                           <tr>
                             <td class='hidden'></td>
                             <td>2</td>
-                            <td>นายเตชินท์ จารุพันธ์</td>
-                            <td>6210550274</td>                          
+                            <td>นางสาวสโรชา เจตะวัฒนะ</td>
+                            <td></td>                          
                             <td>ปริญญาตรี</td>
                             <td>3</td>
-                            <td>550</td>
+                            <td>2,505</td>
                             <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval_ot.php?appeid=1&appid=1&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=2&appid=1&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
                             </td>
                           </tr>
                         ";
@@ -251,15 +319,13 @@
                           <tr>
                             <td class='hidden'></td>
                             <td>3</td>
-                            <td>นางสาวลานนา คิวสุวรรณ</td>
-                            <td>6210552544</td>                          
+                            <td>นางสาวนวลพรรณ ชัยศร</td>
+                            <td></td>                          
                             <td>ปริญญาตรี</td>
-                            <td>3</td>
-                            <td>550</td>
+                            <td>4</td>
+                            <td>2,505</td>
                             <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval_ot.php?appeid=1&appid=1&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=3&appid=1&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
                             </td>
                           </tr>
                         ";
@@ -267,15 +333,13 @@
                           <tr>
                             <td class='hidden'></td>
                             <td>4</td>
-                            <td>นางสาวณัฐกฤตา แสงสร้อย</td>
-                            <td>6210552480</td>                          
+                            <td>นายปิติพล เกื้อกูล</td>
+                            <td></td>                          
                             <td>ปริญญาตรี</td>
-                            <td>3</td>
-                            <td>550</td>
+                            <td>4</td>
+                            <td>2,505</td>
                             <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval_ot.php?appeid=1&appid=1&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=4&appid=1&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
                             </td>
                           </tr>
                         ";
@@ -283,35 +347,244 @@
                           <tr>
                             <td class='hidden'></td>
                             <td>5</td>
-                            <td>นางสาวธัญสิริ สิงคะปะ</td>
-                            <td>6110546101</td>                          
+                            <td>นายโชติพัชร กสิกรรม</td>
+                            <td></td>                          
                             <td>ปริญญาตรี</td>
-                            <td>ภ</td>
-                            <td>1,100</td>
+                            <td>4</td>
+                            <td>2,505</td>
                             <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval_ot.php?appeid=1&appid=1&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=5&appid=1&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
+                            </td>
+                          </tr>
+                        ";
+                      break;
+                      case "2":
+                        echo "
+                          <tr>
+                            <td class='hidden'></td>
+                            <td>1</td>
+                            <td>นายพลาวัสถ์ ส่งพันธ์นธีกูร</td>
+                            <td></td>                          
+                            <td>ปริญญาโท</td>
+                            <td>4</td>
+                            <td>3,340</td>
+                            <td>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=6&appid=2&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
                             </td>
                           </tr>
                         ";
                         echo "
                           <tr>
                             <td class='hidden'></td>
-                            <td>6</td>
-                            <td>นายณฐกร ประจันบาน</td>
-                            <td>6210545653</td>                          
-                            <td>ปริญญาตรี</td>
-                            <td>3</td>
-                            <td>1,100</td>
+                            <td>2</td>
+                            <td>นายสุรงค์กร  เพชรรักษ์</td>
+                            <td></td>                          
+                            <td>ปริญญาเอก</td>
+                            <td>2</td>
+                            <td>3,340</td>
                             <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval_ot.php?appeid=1&appid=1&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=7&appid=2&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
                             </td>
                           </tr>
                         ";
-                        break;
+                        echo "
+                          <tr>
+                            <td class='hidden'></td>
+                            <td>3</td>
+                            <td>นางสาววาริณีย์  สุวรรณรักษ์</td>
+                            <td></td>                          
+                            <td>ปริญญาโท</td>
+                            <td>2</td>
+                            <td>3,340</td>
+                            <td>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=8&appid=2&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
+                            </td>
+                          </tr>
+                        ";
+                        echo "
+                          <tr>
+                            <td class='hidden'></td>
+                            <td>4</td>
+                            <td>นายวุส  ทาแก้ว</td>
+                            <td></td>                          
+                            <td>ปริญญาโท</td>
+                            <td>2</td>
+                            <td>3,340</td>
+                            <td>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=9&appid=2&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
+                            </td>
+                          </tr>
+                        ";
+                        echo "
+                          <tr>
+                            <td class='hidden'></td>
+                            <td>5</td>
+                            <td>นายภคนันท์  วัฒนสินบำรุง</td>
+                            <td></td>                          
+                            <td>ปริญญาเอก</td>
+                            <td>1</td>
+                            <td>3,340</td>
+                            <td>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=10&appid=2&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
+                            </td>
+                          </tr>
+                        ";                      
+                      echo "
+                          <tr>
+                            <td class='hidden'></td>
+                            <td>6</td>
+                            <td>นายฐิติศักดิ์  อัศวรางกูร</td>
+                            <td></td>                          
+                            <td>ปริญญาโท</td>
+                            <td>3</td>
+                            <td>3,340</td>
+                            <td>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=11&appid=2&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
+                            </td>
+                          </tr>
+                        ";                     
+                      echo "
+                          <tr>
+                            <td class='hidden'></td>
+                            <td>7</td>
+                            <td>นายเอื้ออังกูร  มูลรังษี</td>
+                            <td></td>                          
+                            <td>ปริญญาโท</td>
+                            <td>2</td>
+                            <td>3,340</td>
+                            <td>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=12&appid=2&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
+                            </td>
+                          </tr>
+                        ";                      
+                      echo "
+                          <tr>
+                            <td class='hidden'></td>
+                            <td>8</td>
+                            <td>นายกฤษฎิ์  ใหม่เอี่ยม</td>
+                            <td></td>                          
+                            <td>ปริญญาโท</td>
+                            <td>2</td>
+                            <td>3,340</td>
+                            <td>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=13&appid=2&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
+                            </td>
+                          </tr>
+                        ";                      
+                      echo "
+                          <tr>
+                            <td class='hidden'></td>
+                            <td>9</td>
+                            <td>นายพัชรากร  ศิริโยทัย</td>
+                            <td></td>                          
+                            <td>ปริญญาเอก</td>
+                            <td>1</td>
+                            <td>3,340</td>
+                            <td>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=14&appid=2&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
+                            </td>
+                          </tr>
+                        ";
+                        echo "
+                          <tr>
+                            <td class='hidden'></td>
+                            <td>10</td>
+                            <td>นางสาวศนทกานต์  เหลืองวิเศษ</td>
+                            <td></td>                          
+                            <td>ปริญญาโท</td>
+                            <td>3</td>
+                            <td>3,340</td>
+                            <td>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=15&appid=2&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
+                            </td>
+                          </tr>
+                        ";
+                        echo "
+                          <tr>
+                            <td class='hidden'></td>
+                            <td>11</td>
+                            <td>นายณัฐพงษ์  พรมพิทักษ์</td>
+                            <td></td>                          
+                            <td>ปริญญาโท</td>
+                            <td>2</td>
+                            <td>3,340</td>
+                            <td>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=16&appid=2&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
+                            </td>
+                          </tr>
+                        ";
+                        echo "
+                          <tr>
+                            <td class='hidden'></td>
+                            <td>12</td>
+                            <td>นางสาวฑิฆันพร  จิตภักดี</td>
+                            <td></td>                          
+                            <td>ปริญญาโท</td>
+                            <td>4</td>
+                            <td>3,340</td>
+                            <td>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=17&appid=2&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
+                            </td>
+                          </tr>
+                        ";
+                        echo "
+                          <tr>
+                            <td class='hidden'></td>
+                            <td>13</td>
+                            <td>นางสาวพิมพ์นิภา  อุมัยชัย</td>
+                            <td></td>                          
+                            <td>ปริญญาโท</td>
+                            <td>1</td>
+                            <td>3,340</td>
+                            <td>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=18&appid=2&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
+                            </td>
+                          </tr>
+                        ";                      
+                      echo "
+                          <tr>
+                            <td class='hidden'></td>
+                            <td>14</td>
+                            <td>นายอาณกร  ทองบาง</td>
+                            <td></td>                          
+                            <td>ปริญญาโท</td>
+                            <td>1</td>
+                            <td>3,340</td>
+                            <td>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=19&appid=2&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
+                            </td>
+                          </tr>
+                        ";                     
+                      echo "
+                          <tr>
+                            <td class='hidden'></td>
+                            <td>15</td>
+                            <td>นายสิทธ์ชัย  ปัทมารัตน์</td>
+                            <td></td>                          
+                            <td>ปริญญาตรี</td>
+                            <td>4</td>
+                            <td>2,505</td>
+                            <td>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=20&appid=2&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
+                            </td>
+                          </tr>
+                        ";                      
+                      echo "
+                          <tr>
+                            <td class='hidden'></td>
+                            <td>16</td>
+                            <td>นายจิระศักดิ์  แซ่ตัน</td>
+                            <td></td>                          
+                            <td>ปริญญาโท</td>
+                            <td>2</td>
+                            <td>3,340</td>
+                            <td>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=21&appid=2&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
+                            </td>
+                          </tr>
+                        ";
+                      break;
+
                     }
                     
                   ?>

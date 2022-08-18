@@ -31,7 +31,7 @@
         ?>
         <li class="header">MANAGE</li>                
         <li><a href="propose_form.php"><i class="fa fa-calendar-check-o"></i> <span>แบบฟอร์มเสนอรายชื่อนิสิต</span></a></li>
-        <li><a href="approval_form.php"><i class="fa fa-calendar-check-o"></i> <span>แบบฟอร์มขอเบิกทุน (รายเดือน)</span></a></li>
+        <li><a href="approval_form.php"><i class="fa fa-calendar-check-o"></i> <span>ใบสำคัญรับเงิน (รายเดือน)</span></a></li>
         <li><a href="approval_group.php"><i class="fa fa-users"></i> <span>นิสิตในหน่วยงาน</span></a></li>        
         <li><a href="approval_dept.php"><i class="fa fa-building-o"></i> <span>ข้อมูลหน่วยงาน</span></a></li>
         <?php
@@ -48,9 +48,10 @@
         <?php
         if($_SESSION["deptid"]=='99'){
         ?>
-        <li class="header">CALCULATE</li>        
+        <li class="header">DOCUMENT</li>        
         <!-- <li><a href="otdata.php"><i class="fa fa-upload"></i> <span>นำเข้าข้อมูล</span></a></li> -->
         <!-- <li><a href="otdata_calculate.php"><i class="fa fa-gears"></i> <span>คำนวณเวลาทำงาน</span></a></li> -->
+        <li><a href="order_form.php"><i class="fa fa-file-o"></i> <span>คำสั่งผู้ช่วยสอน</span></a></li>
         <?php
         }else{
           if($_SESSION["deptid"]!='101'){

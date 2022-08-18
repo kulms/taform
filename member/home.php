@@ -184,6 +184,156 @@
 
                     //   $i++;
                     // }
+                    // echo "
+                    //       <tr>
+                    //         <td class='hidden'></td>
+                    //         <td>2565</td>                          
+                    //         <td>".$thaimonth[6]." 2565</td>        
+                    //         <td></td>                                            
+                    //         <td>ภาควิชาวิศวกรรมการบินและอวกาศ</td>                          
+                    //         <td>".DateShortThai('2022-06-13')."</td>                          
+                    //         <td>                        
+                    //           <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=1\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
+                    //           <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
+                    //           <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
+                    //         </td>
+                    //       </tr>
+                    //       ";
+                    // echo "
+                    //       <tr>
+                    //         <td class='hidden'></td>
+                    //         <td>2565</td>                          
+                    //         <td>".$thaimonth[6]." 2565</td>                      
+                    //         <td></td>                                                
+                    //         <td>ภาควิชาวิศวกรรมเครื่องกล</td>                          
+                    //         <td>".DateShortThai('2022-06-13')."</td>                          
+                    //         <td>                        
+                    //           <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=1\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
+                    //           <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
+                    //           <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
+                    //         </td>
+                    //       </tr>
+                    //       ";
+                    // echo "
+                    //       <tr>
+                    //         <td class='hidden'></td>
+                    //         <td>2565</td>                          
+                    //         <td>".$thaimonth[6]." 2565</td>                      
+                    //         <td></td>                                                
+                    //         <td>ภาควิชาวิศวกรรมเคมี</td>                          
+                    //         <td>".DateShortThai('2022-06-13')."</td>                          
+                    //         <td>                        
+                    //           <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=1\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
+                    //           <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
+                    //           <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
+                    //         </td>
+                    //       </tr>
+                    //       ";
+                    // echo "
+                    //       <tr>
+                    //         <td class='hidden'></td>
+                    //         <td>2565</td>                          
+                    //         <td>".$thaimonth[6]." 2565</td>                      
+                    //         <td></td>                                                
+                    //         <td>ภาควิชาวิศวกรรมคอมพิวเตอร์</td>                          
+                    //         <td>".DateShortThai('2022-06-13')."</td>                          
+                    //         <td>                        
+                    //           <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=1\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
+                    //           <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
+                    //           <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
+                    //         </td>
+                    //       </tr>
+                    //       ";
+                    // echo "
+                    //       <tr>
+                    //         <td class='hidden'></td>
+                    //         <td>2565</td>                          
+                    //         <td>".$thaimonth[6]." 2565</td>                      
+                    //         <td></td>                                                
+                    //         <td>ภาควิชาวิศวกรรมไฟฟ้า</td>                          
+                    //         <td>".DateShortThai('2022-06-13')."</td>                          
+                    //         <td>                        
+                    //           <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=1\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
+                    //           <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
+                    //           <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
+                    //         </td>
+                    //       </tr>
+                    //       ";
+                    // echo "
+                    //       <tr>
+                    //         <td class='hidden'></td>
+                    //         <td>2565</td>                          
+                    //         <td>".$thaimonth[6]." 2565</td>                      
+                    //         <td></td>                                                
+                    //         <td>ภาควิชาวิศวกรรมทรัพยากรน้ำ</td>                          
+                    //         <td>".DateShortThai('2022-06-13')."</td>                          
+                    //         <td>                        
+                    //           <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=1\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
+                    //           <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
+                    //           <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
+                    //         </td>
+                    //       </tr>
+                    //       ";
+                    // echo "
+                    //       <tr>
+                    //         <td class='hidden'></td>
+                    //         <td>2565</td>                          
+                    //         <td>".$thaimonth[6]." 2565</td>                      
+                    //         <td></td>                                                
+                    //         <td>ภาควิชาวิศวกรรมโยธา</td>                          
+                    //         <td>".DateShortThai('2022-06-13')."</td>                          
+                    //         <td>                        
+                    //           <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=1\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
+                    //           <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
+                    //           <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
+                    //         </td>
+                    //       </tr>
+                    //       ";  
+                    // echo "
+                    //       <tr>
+                    //         <td class='hidden'></td>
+                    //         <td>2565</td>                          
+                    //         <td>".$thaimonth[6]." 2565</td>                      
+                    //         <td></td>                                                
+                    //         <td>ภาควิชาวิศวกรรมสิ่งแวดล้อม</td>                          
+                    //         <td>".DateShortThai('2022-06-13')."</td>                          
+                    //         <td>                        
+                    //           <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=1\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
+                    //           <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
+                    //           <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
+                    //         </td>
+                    //       </tr>
+                    //       ";
+                    // echo "
+                    //       <tr>
+                    //         <td class='hidden'></td>
+                    //         <td>2565</td>                          
+                    //         <td>".$thaimonth[6]." 2565</td>                      
+                    //         <td></td>                                                
+                    //         <td>ภาควิชาวิศวกรรมอุตสาหการ</td>                          
+                    //         <td>".DateShortThai('2022-06-13')."</td>                          
+                    //         <td>                        
+                    //           <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=1\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
+                    //           <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
+                    //           <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
+                    //         </td>
+                    //       </tr>
+                    //       ";
+                    // echo "
+                    //       <tr>
+                    //         <td class='hidden'></td>
+                    //         <td>2565</td>                          
+                    //         <td>".$thaimonth[6]." 2565</td>                      
+                    //         <td></td>                                                
+                    //         <td>ภาควิชาวิศวกรรมวัสดุ</td>                          
+                    //         <td>".DateShortThai('2022-06-13')."</td>                          
+                    //         <td>                        
+                    //           <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=1\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
+                    //           <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
+                    //           <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
+                    //         </td>
+                    //       </tr>
+                    //       "; 
                     echo "
                           <tr>
                             <td class='hidden'></td>
@@ -193,9 +343,7 @@
                             <td>ภาควิชาวิศวกรรมการบินและอวกาศ</td>                          
                             <td>".DateShortThai('2022-06-13')."</td>                          
                             <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=1\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=1\"' ><i class='fa fa-users'></i> แสดงรายชื่อนิสิต</button>
                             </td>
                           </tr>
                           ";
@@ -208,9 +356,7 @@
                             <td>ภาควิชาวิศวกรรมเครื่องกล</td>                          
                             <td>".DateShortThai('2022-06-13')."</td>                          
                             <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=1\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=2\"' ><i class='fa fa-users'></i> แสดงรายชื่อนิสิต</button>
                             </td>
                           </tr>
                           ";
@@ -223,9 +369,7 @@
                             <td>ภาควิชาวิศวกรรมเคมี</td>                          
                             <td>".DateShortThai('2022-06-13')."</td>                          
                             <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=1\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=3\"' ><i class='fa fa-users'></i> แสดงรายชื่อนิสิต</button>
                             </td>
                           </tr>
                           ";
@@ -238,9 +382,7 @@
                             <td>ภาควิชาวิศวกรรมคอมพิวเตอร์</td>                          
                             <td>".DateShortThai('2022-06-13')."</td>                          
                             <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=1\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=4\"' ><i class='fa fa-users'></i> แสดงรายชื่อนิสิต</button>
                             </td>
                           </tr>
                           ";
@@ -253,9 +395,7 @@
                             <td>ภาควิชาวิศวกรรมไฟฟ้า</td>                          
                             <td>".DateShortThai('2022-06-13')."</td>                          
                             <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=1\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=5\"' ><i class='fa fa-users'></i> แสดงรายชื่อนิสิต</button>
                             </td>
                           </tr>
                           ";
@@ -268,9 +408,7 @@
                             <td>ภาควิชาวิศวกรรมทรัพยากรน้ำ</td>                          
                             <td>".DateShortThai('2022-06-13')."</td>                          
                             <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=1\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=6\"' ><i class='fa fa-users'></i> แสดงรายชื่อนิสิต</button>
                             </td>
                           </tr>
                           ";
@@ -283,9 +421,7 @@
                             <td>ภาควิชาวิศวกรรมโยธา</td>                          
                             <td>".DateShortThai('2022-06-13')."</td>                          
                             <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=1\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=7\"' ><i class='fa fa-users'></i> แสดงรายชื่อนิสิต</button>
                             </td>
                           </tr>
                           ";  
@@ -298,9 +434,7 @@
                             <td>ภาควิชาวิศวกรรมสิ่งแวดล้อม</td>                          
                             <td>".DateShortThai('2022-06-13')."</td>                          
                             <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=1\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=8\"' ><i class='fa fa-users'></i> แสดงรายชื่อนิสิต</button>
                             </td>
                           </tr>
                           ";
@@ -313,9 +447,7 @@
                             <td>ภาควิชาวิศวกรรมอุตสาหการ</td>                          
                             <td>".DateShortThai('2022-06-13')."</td>                          
                             <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=1\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=9\"' ><i class='fa fa-users'></i> แสดงรายชื่อนิสิต</button>
                             </td>
                           </tr>
                           ";
@@ -328,12 +460,23 @@
                             <td>ภาควิชาวิศวกรรมวัสดุ</td>                          
                             <td>".DateShortThai('2022-06-13')."</td>                          
                             <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=1\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=10\"' ><i class='fa fa-users'></i> แสดงรายชื่อนิสิต</button>
                             </td>
                           </tr>
-                          ";      
+                          "; 
+                    echo "
+                          <tr>
+                            <td class='hidden'></td>
+                            <td>2565</td>                          
+                            <td>".$thaimonth[6]." 2565</td>                      
+                            <td></td>                                                
+                            <td>ส่วนกลางคณะฯ</td>                          
+                            <td>".DateShortThai('2022-06-13')."</td>                          
+                            <td>                        
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=11\"' ><i class='fa fa-users'></i> แสดงรายชื่อนิสิต</button>
+                            </td>
+                          </tr>
+                          ";     
                   ?>
                   
                 </tbody>
