@@ -213,102 +213,107 @@
                     //   }
                     //   $i++;
                     // }
-                    echo "
-                      <tr>
-                        <td class='hidden'></td>
-                        <td>1</td>
-                        <td>นางสาวสุวรินทร์ พัฒนาชวนชม</td>
-                        <td>6210505619</td>                          
-                        <td>ปริญญาตรี</td>
-                        <td>3</td>
-                        <td>1,200</td>
-                        <td>
-                          <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval_ot.php?appeid=1&appid=1&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
-                          <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
-                          <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
-                        </td>
-                      </tr>
-                    ";
-                    echo "
-                      <tr>
-                        <td class='hidden'></td>
-                        <td>2</td>
-                        <td>นายเตชินท์ จารุพันธ์</td>
-                        <td>6210550274</td>                          
-                        <td>ปริญญาตรี</td>
-                        <td>3</td>
-                        <td>550</td>
-                        <td>
-                          <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval_ot.php?appeid=1&appid=1&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
-                          <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
-                          <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
-                        </td>
-                      </tr>
-                    ";
-                    echo "
-                      <tr>
-                        <td class='hidden'></td>
-                        <td>3</td>
-                        <td>นางสาวลานนา คิวสุวรรณ</td>
-                        <td>6210552544</td>                          
-                        <td>ปริญญาตรี</td>
-                        <td>3</td>
-                        <td>550</td>
-                        <td>
-                          <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval_ot.php?appeid=1&appid=1&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
-                          <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
-                          <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
-                        </td>
-                      </tr>
-                    ";
-                    echo "
-                      <tr>
-                        <td class='hidden'></td>
-                        <td>4</td>
-                        <td>นางสาวณัฐกฤตา แสงสร้อย</td>
-                        <td>6210552480</td>                          
-                        <td>ปริญญาตรี</td>
-                        <td>3</td>
-                        <td>550</td>
-                        <td>
-                          <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval_ot.php?appeid=1&appid=1&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
-                          <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
-                          <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
-                        </td>
-                      </tr>
-                    ";
-                    echo "
-                      <tr>
-                        <td class='hidden'></td>
-                        <td>5</td>
-                        <td>นางสาวธัญสิริ สิงคะปะ</td>
-                        <td>6110546101</td>                          
-                        <td>ปริญญาตรี</td>
-                        <td>ภ</td>
-                        <td>1,100</td>
-                        <td>
-                          <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval_ot.php?appeid=1&appid=1&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
-                          <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
-                          <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
-                        </td>
-                      </tr>
-                    ";
-                    echo "
-                      <tr>
-                        <td class='hidden'></td>
-                        <td>6</td>
-                        <td>นายณฐกร ประจันบาน</td>
-                        <td>6210545653</td>                          
-                        <td>ปริญญาตรี</td>
-                        <td>3</td>
-                        <td>1,100</td>
-                        <td>
-                          <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval_ot.php?appeid=1&appid=1&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
-                          <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
-                          <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
-                        </td>
-                      </tr>
-                    ";
+                    switch ($app_id) {
+                      case "1":
+                        echo "
+                          <tr>
+                            <td class='hidden'></td>
+                            <td>1</td>
+                            <td>นางสาวสุวรินทร์ พัฒนาชวนชม</td>
+                            <td>6210505619</td>                          
+                            <td>ปริญญาตรี</td>
+                            <td>3</td>
+                            <td>1,200</td>
+                            <td>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval_ot.php?appeid=1&appid=1&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
+                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
+                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
+                            </td>
+                          </tr>
+                        ";
+                        echo "
+                          <tr>
+                            <td class='hidden'></td>
+                            <td>2</td>
+                            <td>นายเตชินท์ จารุพันธ์</td>
+                            <td>6210550274</td>                          
+                            <td>ปริญญาตรี</td>
+                            <td>3</td>
+                            <td>550</td>
+                            <td>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval_ot.php?appeid=1&appid=1&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
+                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
+                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
+                            </td>
+                          </tr>
+                        ";
+                        echo "
+                          <tr>
+                            <td class='hidden'></td>
+                            <td>3</td>
+                            <td>นางสาวลานนา คิวสุวรรณ</td>
+                            <td>6210552544</td>                          
+                            <td>ปริญญาตรี</td>
+                            <td>3</td>
+                            <td>550</td>
+                            <td>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval_ot.php?appeid=1&appid=1&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
+                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
+                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
+                            </td>
+                          </tr>
+                        ";
+                        echo "
+                          <tr>
+                            <td class='hidden'></td>
+                            <td>4</td>
+                            <td>นางสาวณัฐกฤตา แสงสร้อย</td>
+                            <td>6210552480</td>                          
+                            <td>ปริญญาตรี</td>
+                            <td>3</td>
+                            <td>550</td>
+                            <td>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval_ot.php?appeid=1&appid=1&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
+                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
+                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
+                            </td>
+                          </tr>
+                        ";
+                        echo "
+                          <tr>
+                            <td class='hidden'></td>
+                            <td>5</td>
+                            <td>นางสาวธัญสิริ สิงคะปะ</td>
+                            <td>6110546101</td>                          
+                            <td>ปริญญาตรี</td>
+                            <td>ภ</td>
+                            <td>1,100</td>
+                            <td>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval_ot.php?appeid=1&appid=1&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
+                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
+                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
+                            </td>
+                          </tr>
+                        ";
+                        echo "
+                          <tr>
+                            <td class='hidden'></td>
+                            <td>6</td>
+                            <td>นายณฐกร ประจันบาน</td>
+                            <td>6210545653</td>                          
+                            <td>ปริญญาตรี</td>
+                            <td>3</td>
+                            <td>1,100</td>
+                            <td>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval_ot.php?appeid=1&appid=1&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
+                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
+                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
+                            </td>
+                          </tr>
+                        ";
+                        break;
+                    }
+                    
                   ?>
                 </tbody>
                
