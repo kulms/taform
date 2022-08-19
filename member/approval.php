@@ -297,7 +297,7 @@
                             <td>3</td>
                             <td>2,505</td>
                             <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=1&appid=1&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"../files/invoice/invoice_test.pdf\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
                             </td>
                           </tr>
                         ";
@@ -311,7 +311,7 @@
                             <td>3</td>
                             <td>2,505</td>
                             <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=2&appid=1&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"../files/invoice/invoice_test.pdf\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
                             </td>
                           </tr>
                         ";
@@ -325,7 +325,7 @@
                             <td>4</td>
                             <td>2,505</td>
                             <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=3&appid=1&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"../files/invoice/invoice_test.pdf\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
                             </td>
                           </tr>
                         ";
@@ -339,7 +339,7 @@
                             <td>4</td>
                             <td>2,505</td>
                             <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=4&appid=1&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"../files/invoice/invoice_test.pdf\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
                             </td>
                           </tr>
                         ";
@@ -353,7 +353,7 @@
                             <td>4</td>
                             <td>2,505</td>
                             <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=5&appid=1&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"../files/invoice/invoice_test.pdf\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
                             </td>
                           </tr>
                         ";
@@ -369,7 +369,7 @@
                             <td>4</td>
                             <td>3,340</td>
                             <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=6&appid=2&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"../files/invoice/invoice_test.pdf\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
                             </td>
                           </tr>
                         ";
@@ -383,7 +383,7 @@
                             <td>2</td>
                             <td>3,340</td>
                             <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=7&appid=2&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"../files/invoice/invoice_test.pdf\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
                             </td>
                           </tr>
                         ";
@@ -397,7 +397,7 @@
                             <td>2</td>
                             <td>3,340</td>
                             <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=8&appid=2&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"../files/invoice/invoice_test.pdf\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
                             </td>
                           </tr>
                         ";
@@ -411,7 +411,7 @@
                             <td>2</td>
                             <td>3,340</td>
                             <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=9&appid=2&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"../files/invoice/invoice_test.pdf\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
                             </td>
                           </tr>
                         ";
@@ -425,7 +425,7 @@
                             <td>1</td>
                             <td>3,340</td>
                             <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=10&appid=2&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"../files/invoice/invoice_test.pdf\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
                             </td>
                           </tr>
                         ";                      
@@ -439,7 +439,7 @@
                             <td>3</td>
                             <td>3,340</td>
                             <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=11&appid=2&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"../files/invoice/invoice_test.pdf\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
                             </td>
                           </tr>
                         ";                     
@@ -453,7 +453,7 @@
                             <td>2</td>
                             <td>3,340</td>
                             <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=12&appid=2&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"../files/invoice/invoice_test.pdf\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
                             </td>
                           </tr>
                         ";                      
@@ -467,7 +467,7 @@
                             <td>2</td>
                             <td>3,340</td>
                             <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=13&appid=2&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"../files/invoice/invoice_test.pdf\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
                             </td>
                           </tr>
                         ";                      
@@ -481,7 +481,7 @@
                             <td>1</td>
                             <td>3,340</td>
                             <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=14&appid=2&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"../files/invoice/invoice_test.pdf\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
                             </td>
                           </tr>
                         ";
@@ -495,7 +495,7 @@
                             <td>3</td>
                             <td>3,340</td>
                             <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=15&appid=2&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"../files/invoice/invoice_test.pdf\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
                             </td>
                           </tr>
                         ";
@@ -509,7 +509,7 @@
                             <td>2</td>
                             <td>3,340</td>
                             <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=16&appid=2&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"../files/invoice/invoice_test.pdf\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
                             </td>
                           </tr>
                         ";
@@ -523,7 +523,7 @@
                             <td>4</td>
                             <td>3,340</td>
                             <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=17&appid=2&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"../files/invoice/invoice_test.pdf\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
                             </td>
                           </tr>
                         ";
@@ -537,7 +537,7 @@
                             <td>1</td>
                             <td>3,340</td>
                             <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=18&appid=2&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"../files/invoice/invoice_test.pdf\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
                             </td>
                           </tr>
                         ";                      
@@ -551,7 +551,7 @@
                             <td>1</td>
                             <td>3,340</td>
                             <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=19&appid=2&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"../files/invoice/invoice_test.pdf\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
                             </td>
                           </tr>
                         ";                     
@@ -565,7 +565,7 @@
                             <td>4</td>
                             <td>2,505</td>
                             <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=20&appid=2&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"../files/invoice/invoice_test.pdf\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
                             </td>
                           </tr>
                         ";                      
@@ -579,7 +579,7 @@
                             <td>2</td>
                             <td>3,340</td>
                             <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=21&appid=2&empid=1\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"../files/invoice/invoice_test.pdf\"' ><i class='fa fa-download'></i> ดาวน์โหลดใบสำคัญรับเงิน</button>
                             </td>
                           </tr>
                         ";

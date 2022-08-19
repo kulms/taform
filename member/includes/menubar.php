@@ -32,7 +32,7 @@
         <li class="header">MANAGE</li>                
         <li><a href="propose_form.php"><i class="fa fa-calendar-check-o"></i> <span>แบบฟอร์มเสนอรายชื่อนิสิต</span></a></li>
         <li><a href="approval_form.php"><i class="fa fa-calendar-check-o"></i> <span>ใบสำคัญรับเงิน (รายเดือน)</span></a></li>
-        <li><a href="approval_group.php"><i class="fa fa-users"></i> <span>นิสิตในหน่วยงาน</span></a></li>        
+        <!-- <li><a href="approval_group.php"><i class="fa fa-users"></i> <span>นิสิตในหน่วยงาน</span></a></li>         -->
         <li><a href="approval_dept.php"><i class="fa fa-building-o"></i> <span>ข้อมูลหน่วยงาน</span></a></li>
         <?php
         }
@@ -40,7 +40,7 @@
         <?php
         if($_SESSION["deptid"]=='99'){
         ?>        
-        <li><a href="approval_emp.php"><i class="fa fa-users"></i> <span>ข้อมูลนิสิต</span></a></li>
+        <!-- <li><a href="approval_emp.php"><i class="fa fa-users"></i> <span>ข้อมูลนิสิต</span></a></li> -->
         <!-- <li><a href="approval_position.php"><i class="fa fa-star"></i> <span>ข้อมูลตำแหน่ง</span></a></li> -->
         <?php
         }
@@ -80,7 +80,9 @@
         ?>
         <li class="header">PRINTABLES</li>
         <!-- <li><a href="payroll.php"><i class="fa fa-files-o"></i> <span>Payroll</span></a></li> -->
-        <li><a href="approval_form_print.php"><i class="fa fa-files-o"></i> <span>พิมพ์แบบฟอร์มขอทุน</span></a></li>
+        <!-- <li><a href="approval_form_print.php"><i class="fa fa-files-o"></i> <span>พิมพ์แบบฟอร์มขอทุน</span></a></li> -->
+        <li><a href="draft_order.php"><i class="fa fa-file-o"></i> <span>พิมพ์คำสั่งผู้ช่วยสอน (ทั้งหมด)</span></a></li>
+        <li><a href="draft_order_dept.php"><i class="fa fa-file-o"></i> <span>พิมพ์คำสั่งผู้ช่วยสอน (หน่วยงาน)</span></a></li>
         <!-- <li><a href="schedule_employee.php"><i class="fa fa-clock-o"></i> <span>Schedule</span></a></li> -->
         <!-- <li><a href="otdata_print.php"><i class="fa fa-money"></i> <span>พิมพ์บัญชีลงเวลาปฏิบัติงาน</span></a></li> -->
         <!-- <li><a href="otdata_print_2563.php"><i class="fa fa-money"></i> <span>พิมพ์บัญชีลงเวลาปฏิบัติงาน</span></a></li>
