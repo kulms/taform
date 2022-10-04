@@ -57,14 +57,14 @@
               <!-- /.box-header -->
               <!-- form start -->
               <!-- <form id="frmMain" class="form-horizontal" action="approval_form.php" method="post" enctype="multipart/form-data"> -->
-              <form class="form-horizontal" method="POST" action="approval_form.php">  
+              <form class="form-horizontal" method="POST" action="draft_order_dept.php">  
                 <div class="box-body">                                        
                   <div class="form-group">
-                    <label for="year_id" class="col-sm-1 control-label">ปีการศึกษา</label>
+                    <label for="year_id" class="col-sm-1 control-label">ปีการศึกษา <span style="color:red;">*</span></label>
                     <div class="col-sm-2">
                       <?php						  
-                        $sql = "SELECT * FROM years ORDER BY CONVERT (year_name USING tis620)";
-                        $query = $conn->query($sql);
+                         $sql = "select fiscal_id, fiscal_name from fiscal order by fiscal_name DESC;";
+                         $query = $conn->query($sql);
                         // if(isset($_SESSION["apyear_id"])){
                         //   $oldcurYearId = $_SESSION["apyear_id"];
                         //   $curYear = getYearNamefromYearId($conn,$oldcurYearId);
@@ -73,62 +73,61 @@
                         // }                        
                         $curYear = date('Y')+543;	
                       ?>
-                      <select class="form-control" id="year_id" name="year_id" required>
+                      <select class="form-control" id="fiscal_id" name="fiscal_id" required>
                           <option value="">Not Selected</option>                            
                           <?php
                           while($yrow = $query->fetch_assoc()){
-                            if($yrow["year_name"]==$curYear){
+                            if($yrow["fiscal_name"]==$curYear){
                               echo "
-                              <option value='".$yrow['year_id']."' selected>".$yrow['year_name']."</option>
+                              <option value='".$yrow['fiscal_id']."' selected>".$yrow['fiscal_name']."</option>
                               ";
                             }else{
                               echo "
-                              <option value='".$yrow['year_id']."'>".$yrow['year_name']."</option>
+                              <option value='".$yrow['fiscal_id']."'>".$yrow['fiscal_name']."</option>
                               ";	
                             }
                           }
-                          $query->free();
+                          $query->free_result();
                           ?>                          
                       </select>  
                     </div>
                     <?php 
-                    if(!isset($_POST['year_id'])){                      
-                      if(isset($_SESSION['apcurMonth'])){                    
-                        $curMonth =  $_SESSION["apcurMonth"];
-                      }else{
-                        $curMonth = date('n');
-                      }  
-                    }else{
-                      $curMonth = $_POST['app_month'];
-                    }
+                    // if(!isset($_POST['year_id'])){                      
+                    //   if(isset($_SESSION['apcurMonth'])){                    
+                    //     $curMonth =  $_SESSION["apcurMonth"];
+                    //   }else{
+                    //     $curMonth = date('n');
+                    //   }  
+                    // }else{
+                    //   $curMonth = $_POST['app_month'];
+                    // }
                     // if(isset($_SESSION['apcurMonth'])){                    
                     //   $curMonth =  $_SESSION["apcurMonth"];
                     // }  
                     $curSem=1;
                     ?>
-                    <label for="app_month" class="col-sm-1 control-label">ภาคการศึกษา</label>
+                    <label for="sem_id" class="col-sm-2 control-label">ภาคการศึกษา <span style="color:red;">*</span></label>
                     <div class="col-sm-2">                      
-                      <!-- <select class="form-control" name="app_month" id="app_month">
-                        <option value="" selected>- Select -</option>
-                        <option value="1" <?php if($curMonth==1) echo "selected";?>>มกราคม</option>
-                        <option value="2" <?php if($curMonth==2) echo "selected";?>>กุมภาพันธ์</option>
-                        <option value="3" <?php if($curMonth==3) echo "selected";?>>มีนาคม</option>
-                        <option value="4" <?php if($curMonth==4) echo "selected";?>>เมษายน</option>
-                        <option value="5" <?php if($curMonth==5) echo "selected";?>>พฤษภาคม</option>
-                        <option value="6" <?php if($curMonth==6) echo "selected";?>>มิถุนายน</option>
-                        <option value="7" <?php if($curMonth==7) echo "selected";?>>กรกฎาคม</option>
-                        <option value="8" <?php if($curMonth==8) echo "selected";?>>สิงหาคม</option>
-                        <option value="9" <?php if($curMonth==9) echo "selected";?>>กันยายน</option>
-                        <option value="10" <?php if($curMonth==10) echo "selected";?>>ตุลาคม</option>
-                        <option value="11" <?php if($curMonth==11) echo "selected";?>>พฤศจิกายน</option>
-                        <option value="12" <?php if($curMonth==12) echo "selected";?>>ธันวาคม</option>
-                      </select>   -->
-                      <select class="form-control" name="app_sem" id="app_sem">
-                        <option value="" selected>- Select -</option>
-                        <option value="1" <?php if($curSem==1) echo "selected";?>>ภาคต้น</option>
-                        <option value="2" <?php if($curSem==2) echo "selected";?>>ภาคปลาย</option>
-                        <option value="3" <?php if($curSem==3) echo "selected";?>>ภาคฤดูร้อน</option>
-                      </select>
+                      <?php						  
+                      $sql = "select sem_id, sem_name from ta_sem order by sem_id;";
+                      // $query = mysqli_query($conn,$sql);
+                      $query = $conn->query($sql);
+                      ?>
+                        <select class="form-control" id="sem_id" name="sem_id" required>
+                          <option value="">Not Selected</option>
+                          <?php
+                          // while($row=@mysqli_fetch_array($query,MYSQLI_ASSOC)){
+                          while($row = $query->fetch_assoc()){
+                          ?>
+                            <option value="<?php echo $row["sem_id"];?>">
+                              <?php echo $row["sem_name"];?>
+                            </option>
+                          <?php
+                          }
+                          // mysqli_free_result($query);
+                          $query->free_result();
+                          ?>
+                        </select>
 
                     </div>
                   </div>
@@ -149,106 +148,76 @@
       <?php
         $sqlCondition = "";
 
-        if(isset($_POST['year_id'])){
-          $sqlCurrYear = "SELECT year_id, year_name FROM years WHERE year_id = '".$_POST['year_id']."'";
+        if(isset($_POST['fiscal_id']) && isset($_POST['sem_id'])){
+          $fiscal_id = $_POST['fiscal_id'];
+          $sem_id = $_POST['sem_id'];
+          $sqlCurrYear = "SELECT fiscal_id, fiscal_name FROM fiscal WHERE fiscal_id = '".$_POST['fiscal_id']."'";
           $qCurrYear = $conn->query($sqlCurrYear);
           $rowCurrYear = $qCurrYear->fetch_assoc();
-          $year_name = $rowCurrYear["year_name"];
+          $fiscal_name = $rowCurrYear["fiscal_name"];
 
-          if($_POST['app_month']==""){
-            $year_id = $_POST['year_id'];
-            if($_SESSION["deptid"]=='99'){
-              $sqlCondition.=" WHERE a.year_id='".$year_id."' ";
-            }else{
-              $sqlCondition.=" AND a.year_id='".$year_id."' ";
-            } 
-            $curMonth = 0; 
-            
-            if(isset($_SESSION['apyear_id'])){
-              unset($_SESSION['apyear_id']);
-            }
-            if(isset($_SESSION['apcurMonth'])){
-                unset($_SESSION['apcurMonth']);
-            }
-            $_SESSION["apyear_id"]=$year_id;
-            $_SESSION["apcurMonth"]=$curMonth;
+          $sqlCurrSem = "SELECT sem_id, sem_name FROM ta_sem WHERE sem_id = '".$_POST['sem_id']."'";
+          $qCurrSem = $conn->query($sqlCurrSem);
+          $rowCurrSem = $qCurrSem->fetch_assoc();
+          $sem_name = $rowCurrSem["sem_name"];
 
+          if($_SESSION["deptid"]=='99'){
+            $sqlCondition.=" WHERE a.fiscal_id='".$fiscal_id."' AND a.sem_id='".$sem_id."' ";
           }else{
-            $year_id = $_POST['year_id'];
-            $app_month = $_POST['app_month'];               
-            if($_SESSION["deptid"]=='99'){
-              $sqlCondition.=" WHERE a.year_id='".$year_id."' AND a.app_month = '".$app_month."' ";
-            }else{
-              $sqlCondition.=" AND a.year_id='".$year_id."' AND a.app_month = '".$app_month."' ";
-            } 
-            $curMonth = $_POST['app_month'];   
-            
-            if(isset($_SESSION['apyear_id'])){
-              unset($_SESSION['apyear_id']);
-            }
-            if(isset($_SESSION['apcurMonth'])){
-                unset($_SESSION['apcurMonth']);
-            }
-            $_SESSION["apyear_id"]=$year_id;
-            $_SESSION["apcurMonth"]=$curMonth;
-
+            $sqlCondition.=" WHERE a.fiscal_id='".$fiscal_id."' AND a.sem_id='".$sem_id."' AND a.dept_id='".$_SESSION["deptid"]."' ";
           }
+
         }else{
-          if(isset($_SESSION['apyear_id'])){
-            $curYearId = $_SESSION['apyear_id'];
-            $curMonth =  $_SESSION["apcurMonth"];
-            $sqlCurrYear = "SELECT year_id, year_name FROM years WHERE year_id = '".$curYearId."'";
+          if(isset($_GET['fid']) && isset($_GET['sid'])){
+            $fiscal_id = $_GET['fid'];
+            $sem_id = $_GET['sid'];
+            $sqlCurrYear = "SELECT fiscal_id, fiscal_name FROM fiscal WHERE fiscal_id = '".$_GET['fid']."'";
             $qCurrYear = $conn->query($sqlCurrYear);
             $rowCurrYear = $qCurrYear->fetch_assoc();
-            $curYear = $rowCurrYear["year_name"];
-            $year_name = $rowCurrYear["year_name"];
-            // $curMonth = date('n');	
-            //echo $curMonth;
-
+            $fiscal_name = $rowCurrYear["fiscal_name"];
+  
+            $sqlCurrSem = "SELECT sem_id, sem_name FROM ta_sem WHERE sem_id = '".$_GET['sid']."'";
+            $qCurrSem = $conn->query($sqlCurrSem);
+            $rowCurrSem = $qCurrSem->fetch_assoc();
+            $sem_name = $rowCurrSem["sem_name"];
+  
             if($_SESSION["deptid"]=='99'){
-              $sqlCondition.=" WHERE a.year_id='".$rowCurrYear["year_id"]."' AND a.app_month='".$curMonth."' ";
+              $sqlCondition.=" WHERE a.fiscal_id='".$fiscal_id."' AND a.sem_id='".$sem_id."' ";
             }else{
-              $sqlCondition.=" AND a.year_id='".$rowCurrYear["year_id"]."' AND a.app_month='".$curMonth."' ";
+              $sqlCondition.=" WHERE a.fiscal_id='".$fiscal_id."' AND a.sem_id='".$sem_id."' AND a.dept_id='".$_SESSION["deptid"]."' ";
             }
           }else{
-            $sqlCurrYear = "SELECT year_id, year_name FROM years WHERE year_name LIKE '".$curYear."'";
-            $qCurrYear = $conn->query($sqlCurrYear);
-            $rowCurrYear = $qCurrYear->fetch_assoc();
-
-            $year_name = $rowCurrYear["year_name"];
-
-            // $curMonth = date('n');	
-            //echo $curMonth;
+            $fiscal_id = 0;
+            $sem_id = 0;
+            $sem_name = "-";
 
             if($_SESSION["deptid"]=='99'){
-              $sqlCondition.=" WHERE a.year_id='".$rowCurrYear["year_id"]."' AND a.app_month='".$curMonth."' ";
+              $sqlCondition.=" WHERE a.fiscal_id='".$fiscal_id."' AND a.sem_id='".$sem_id."' ";
             }else{
-              $sqlCondition.=" AND a.year_id='".$rowCurrYear["year_id"]."' AND a.app_month='".$curMonth."' ";
+              $sqlCondition.=" WHERE a.fiscal_id='".$fiscal_id."' AND a.sem_id='".$sem_id."' AND a.dept_id='".$_SESSION["deptid"]."' ";
             }
           }
-
-
         }
       ?>
       <div class="row">
         <div class="col-xs-12">
           <div class="box">
-            <?php
-            if($_SESSION["is_admin"]=='1'){
+            <!-- <?php
+            //if($_SESSION["is_admin"]=='1'){
             ?>
             <div class="box-header with-border">
               <a href="#addnew" data-toggle="modal" class="btn btn-primary btn-sm btn-flat"><i class="fa fa-plus"></i> New</a>
             </div>
             <?php
-            }
-            ?>
+            //}
+            ?> -->
             <div class="box-body">
               <!-- <h4 class="box-title"> 
               แสดงผลแบบฟอร์มขออนุมัติ ปี พ.ศ.<?php echo $curYear;?> เดือน <?php echo MonthThai($curMonth);?>
               </h4> -->
               <h4 class="box-title"> 
               <!-- แสดงผลแบบฟอร์มเสนอรายชื่อนิสิต ปีการศึกษา<?php echo $year_name;?> เดือน <?php // echo MonthThai($curMonth);?> -->
-              แสดงผลแบบฟอร์มเสนอรายชื่อนิสิต ปีการศึกษา <?php echo $year_name;?> ภาคการศึกษา <?php echo "ภาคต้น";?>
+              แสดงผลคำสั่งแต่งตั้งผู้ช่วยสอน ปีการศึกษา <?php echo $curYear;?> ภาคการศึกษา <?php echo $sem_name;?>
               </h4>
               <table id="propose" class="table table-bordered" width="100%">
                 <thead>
@@ -268,292 +237,33 @@
                 </thead>
                 <tbody>
                 <?php
-                    echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>ปีการศึกษา 2565 ภาคต้น</td>                                                      
-                            <td></td>         
-                            <td style='text-align:center'>ครั้งที่ 1</td>         
-                            <td>ภาควิชาวิศวกรรมการบินและอวกาศ</td>                          
-                            <td>".DateShortThai('2022-06-13')."</td>                                                      
-                            <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"../files/draft_order/report_taform01_dept.pdf\"' ><i class='fa fa-download'></i> ดาวน์โหลด</button>
-                            </td>
-                          </tr>
-                          ";
-                    echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>ปีการศึกษา 2565 ภาคต้น</td>                                                      
-                            <td></td>     
-                            <td style='text-align:center'>ครั้งที่ 1</td>         
-                            <td>ภาควิชาวิศวกรรมเครื่องกล</td>                          
-                            <td>".DateShortThai('2022-06-13')."</td>                                                      
-                            <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"#\"' ><i class='fa fa-download'></i> ดาวน์โหลด</button>
-                            </td>
-                          </tr>
-                          ";
-                    echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>ปีการศึกษา 2565 ภาคต้น</td>                                                      
-                            <td></td>               
-                            <td style='text-align:center'>ครั้งที่ 1</td>         
-                            <td>ภาควิชาวิศวกรรมเคมี</td>                          
-                            <td>".DateShortThai('2022-06-13')."</td>                                                      
-                            <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"#\"' ><i class='fa fa-download'></i> ดาวน์โหลด</button>
-                            </td>
-                          </tr>
-                          ";
-                    echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>ปีการศึกษา 2565 ภาคต้น</td>                                                      
-                            <td></td>               
-                            <td style='text-align:center'>ครั้งที่ 1</td>         
-                            <td>ภาควิชาวิศวกรรมคอมพิวเตอร์</td>                          
-                            <td>".DateShortThai('2022-06-13')."</td>                                                      
-                            <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"#\"' ><i class='fa fa-download'></i> ดาวน์โหลด</button>
-                            </td>
-                          </tr>
-                          ";
-                    echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>ปีการศึกษา 2565 ภาคต้น</td>                                                      
-                            <td></td>               
-                            <td style='text-align:center'>ครั้งที่ 1</td>         
-                            <td>ภาควิชาวิศวกรรมไฟฟ้า</td>                          
-                            <td>".DateShortThai('2022-06-13')."</td>                                                      
-                            <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"#\"' ><i class='fa fa-download'></i> ดาวน์โหลด</button>
-                            </td>
-                          </tr>
-                          ";
-                    echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>ปีการศึกษา 2565 ภาคต้น</td>                                                      
-                            <td></td>               
-                            <td style='text-align:center'>ครั้งที่ 1</td>         
-                            <td>ภาควิชาวิศวกรรมทรัพยากรน้ำ</td>                          
-                            <td>".DateShortThai('2022-06-13')."</td>                                                      
-                            <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"#\"' ><i class='fa fa-download'></i> ดาวน์โหลด</button>
-                            </td>
-                          </tr>
-                          ";
-                    echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>ปีการศึกษา 2565 ภาคต้น</td>                                                      
-                            <td></td>               
-                            <td style='text-align:center'>ครั้งที่ 1</td>         
-                            <td>ภาควิชาวิศวกรรมโยธา</td>                          
-                            <td>".DateShortThai('2022-06-13')."</td>                                                      
-                            <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"#\"' ><i class='fa fa-download'></i> ดาวน์โหลด</button>
-                            </td>
-                          </tr>
-                          ";  
-                    echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>ปีการศึกษา 2565 ภาคต้น</td>                                                      
-                            <td></td>               
-                            <td style='text-align:center'>ครั้งที่ 1</td>         
-                            <td>ภาควิชาวิศวกรรมสิ่งแวดล้อม</td>                          
-                            <td>".DateShortThai('2022-06-13')."</td>                                                      
-                            <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"#\"' ><i class='fa fa-download'></i> ดาวน์โหลด</button>
-                            </td>
-                          </tr>
-                          ";
-                    echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>ปีการศึกษา 2565 ภาคต้น</td>                                                      
-                            <td></td>               
-                            <td style='text-align:center'>ครั้งที่ 1</td>         
-                            <td>ภาควิชาวิศวกรรมอุตสาหการ</td>                          
-                            <td>".DateShortThai('2022-06-13')."</td>                                                      
-                            <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"#\"' ><i class='fa fa-download'></i> ดาวน์โหลด</button>
-                            </td>
-                          </tr>
-                          ";
-                    echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>ปีการศึกษา 2565 ภาคต้น</td>                                                      
-                            <td></td>               
-                            <td style='text-align:center'>ครั้งที่ 1</td>         
-                            <td>ภาควิชาวิศวกรรมวัสดุ</td>                          
-                            <td>".DateShortThai('2022-06-13')."</td>                                                      
-                            <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"#\"' ><i class='fa fa-download'></i> ดาวน์โหลด</button>
-                            </td>
-                          </tr>
-                          ";
-                    echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>ปีการศึกษา 2565 ภาคต้น</td>                                                      
-                            <td></td>               
-                            <td style='text-align:center'>ครั้งที่ 1</td>         
-                            <td>ส่วนกลางคณะฯ</td>                          
-                            <td>".DateShortThai('2022-06-13')."</td>                                                      
-                            <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"#\"' ><i class='fa fa-download'></i> ดาวน์โหลด</button>
-                            </td>
-                          </tr>
-                          ";
-                    echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>ปีการศึกษา 2565 ภาคต้น</td>                                                      
-                            <td></td>         
-                            <td style='text-align:center'>ครั้งที่ 2</td>         
-                            <td>ภาควิชาวิศวกรรมการบินและอวกาศ</td>                          
-                            <td>".DateShortThai('2022-06-13')."</td>                                                      
-                            <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"#\"' ><i class='fa fa-download'></i> ดาวน์โหลด</button>
-                            </td>
-                          </tr>
-                          ";
-                    echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>ปีการศึกษา 2565 ภาคต้น</td>                                                      
-                            <td></td>     
-                            <td style='text-align:center'>ครั้งที่ 2</td>         
-                            <td>ภาควิชาวิศวกรรมเครื่องกล</td>                          
-                            <td>".DateShortThai('2022-06-13')."</td>                                                      
-                            <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"#\"' ><i class='fa fa-download'></i> ดาวน์โหลด</button>
-                            </td>
-                          </tr>
-                          ";
-                    echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>ปีการศึกษา 2565 ภาคต้น</td>                                                      
-                            <td></td>               
-                            <td style='text-align:center'>ครั้งที่ 2</td>         
-                            <td>ภาควิชาวิศวกรรมเคมี</td>                          
-                            <td>".DateShortThai('2022-06-13')."</td>                                                      
-                            <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"#\"' ><i class='fa fa-download'></i> ดาวน์โหลด</button>
-                            </td>
-                          </tr>
-                          ";
-                    echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>ปีการศึกษา 2565 ภาคต้น</td>                                                      
-                            <td></td>               
-                            <td style='text-align:center'>ครั้งที่ 2</td>         
-                            <td>ภาควิชาวิศวกรรมคอมพิวเตอร์</td>                          
-                            <td>".DateShortThai('2022-06-13')."</td>                                                      
-                            <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"#\"' ><i class='fa fa-download'></i> ดาวน์โหลด</button>
-                            </td>
-                          </tr>
-                          ";
-                    echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>ปีการศึกษา 2565 ภาคต้น</td>                                                      
-                            <td></td>               
-                            <td style='text-align:center'>ครั้งที่ 2</td>         
-                            <td>ภาควิชาวิศวกรรมไฟฟ้า</td>                          
-                            <td>".DateShortThai('2022-06-13')."</td>                                                      
-                            <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"#\"' ><i class='fa fa-download'></i> ดาวน์โหลด</button>
-                            </td>
-                          </tr>
-                          ";
-                    echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>ปีการศึกษา 2565 ภาคต้น</td>                                                      
-                            <td></td>               
-                            <td style='text-align:center'>ครั้งที่ 2</td>         
-                            <td>ภาควิชาวิศวกรรมทรัพยากรน้ำ</td>                          
-                            <td>".DateShortThai('2022-06-13')."</td>                                                      
-                            <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"#\"' ><i class='fa fa-download'></i> ดาวน์โหลด</button>
-                            </td>
-                          </tr>
-                          ";
-                    echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>ปีการศึกษา 2565 ภาคต้น</td>                                                      
-                            <td></td>               
-                            <td style='text-align:center'>ครั้งที่ 2</td>         
-                            <td>ภาควิชาวิศวกรรมโยธา</td>                          
-                            <td>".DateShortThai('2022-06-13')."</td>                                                      
-                            <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"#\"' ><i class='fa fa-download'></i> ดาวน์โหลด</button>
-                            </td>
-                          </tr>
-                          ";  
-                    echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>ปีการศึกษา 2565 ภาคต้น</td>                                                      
-                            <td></td>               
-                            <td style='text-align:center'>ครั้งที่ 2</td>         
-                            <td>ภาควิชาวิศวกรรมสิ่งแวดล้อม</td>                          
-                            <td>".DateShortThai('2022-06-13')."</td>                                                      
-                            <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"#\"' ><i class='fa fa-download'></i> ดาวน์โหลด</button>
-                            </td>
-                          </tr>
-                          ";
-                    echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>ปีการศึกษา 2565 ภาคต้น</td>                                                      
-                            <td></td>               
-                            <td style='text-align:center'>ครั้งที่ 2</td>         
-                            <td>ภาควิชาวิศวกรรมอุตสาหการ</td>                          
-                            <td>".DateShortThai('2022-06-13')."</td>                                                      
-                            <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"#\"' ><i class='fa fa-download'></i> ดาวน์โหลด</button>
-                            </td>
-                          </tr>
-                          ";
-                    echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>ปีการศึกษา 2565 ภาคต้น</td>                                                      
-                            <td></td>               
-                            <td style='text-align:center'>ครั้งที่ 2</td>         
-                            <td>ภาควิชาวิศวกรรมวัสดุ</td>                          
-                            <td>".DateShortThai('2022-06-13')."</td>                                                      
-                            <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"#\"' ><i class='fa fa-download'></i> ดาวน์โหลด</button>
-                            </td>
-                          </tr>
-                          ";      
+                    $sql = "SELECT a.*, d.dept_name, f.fiscal_name, s.sem_name
+                              FROM approval a 
+                                  LEFT JOIN ta_dept d ON d.dept_id=a.dept_id 
+                                  LEFT JOIN fiscal f ON f.fiscal_id=a.fiscal_id
+                                  LEFT JOIN ta_sem s ON s.sem_id=a.sem_id
+                            ".$sqlCondition."
+                              ORDER BY a.app_times ASC, CONVERT(dept_name USING tis620)";
+                    // echo $sql; 
+                    $query = $conn->query($sql);
+                    $i=1;
+                    while($row = $query->fetch_assoc()){
                       echo "
                           <tr>
                             <td class='hidden'></td>
-                            <td>ปีการศึกษา 2565 ภาคต้น</td>                                                      
-                            <td></td>               
-                            <td style='text-align:center'>ครั้งที่ 2</td>         
-                            <td>ส่วนกลางคณะฯ</td>                          
-                            <td>".DateShortThai('2022-06-13')."</td>                                                      
+                            <td>ปีการศึกษา ".$row["fiscal_name"]." ".$row["sem_name"]."</td>                                                      
+                            <td></td>         
+                            <td style='text-align:center'>ครั้งที่ ".$row['app_times']."</td>         
+                            <td>".$row['dept_name']."</td>                          
+                            <td>".DateShortThai($row["lupdate_date"])."</td>                          
                             <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"#\"' ><i class='fa fa-download'></i> ดาวน์โหลด</button>
+                            <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"draft_order_dept_generate.php?fid=".$row['fiscal_id']."&sid=".$row['sem_id']."&atimes=".$row['app_times']."&deptid=".$row['dept_id']."\"' ><i class='fa fa-download'></i> ดาวน์โหลดร่างคำสั่ง</button>
                             </td>
                           </tr>
-                          ";      
+                          ";
+                      $i++;
+                    }
+                    $query->free_result();                         
                   ?>                  
                 </tbody>
               </table>

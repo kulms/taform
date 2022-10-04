@@ -33,7 +33,7 @@
                 <select class="form-control" name="dept_id" id="dept_id" required>
                     <option value="" selected>- Select -</option>
                 <?php
-                    $sql = "SELECT * FROM department ORDER BY CONVERT(department.dept_name USING tis620);";
+                    $sql = "SELECT * FROM ta_dept ORDER BY CONVERT(ta_dept.dept_name USING tis620);";
                     $query = $conn->query($sql);
                     while($yrow = $query->fetch_assoc()){
                         echo "

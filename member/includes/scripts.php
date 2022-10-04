@@ -192,7 +192,7 @@
 
     $('#example1').DataTable({
       responsive: true,
-      "pageLength": 25,
+      "pageLength": 50,
     })
     $('#example2').DataTable({
       'paging'      : true,
@@ -818,17 +818,33 @@ $(function(){
 	//Date picker
   $('#datepicker_add').datepicker({
     autoclose: true,
-    multidate: true,
+    // multidate: true,
+    format: 'yyyy-mm-dd'
+  })
+  $('#datepicker_add2').datepicker({
+    autoclose: true,
+    // multidate: true,
     format: 'yyyy-mm-dd'
   })
   $('#datepicker_edit').datepicker({
     autoclose: true,
     format: 'yyyy-mm-dd',
-    enabled : false,
-    maxDate: now,
-    minDate: now
+    // enabled : false,
+    // maxDate: now,
+    // minDate: now
+  })
+  $('#datepicker_edit2').datepicker({
+    autoclose: true,
+    format: 'yyyy-mm-dd',
+    // enabled : false,
+    // maxDate: now,
+    // minDate: now
   })
   $('#datepicker_del').datepicker({
+    autoclose: true,
+    format: 'yyyy-mm-dd'
+  })
+  $('#datepicker_del2').datepicker({
     autoclose: true,
     format: 'yyyy-mm-dd'
   })

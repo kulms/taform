@@ -1,6 +1,6 @@
 <?php
 	$conn = new mysqli('localhost', 'root', '', 'taform');
-	// $conn = new mysqli('localhost', 'oteng', 'p@ssword1234', 'oteng');
+	// $conn = new mysqli('localhost', 'oteng', 'p@ssword1234', 'taform');
 
 	$cs1 = "SET character_set_results=utf8";
 	$query = $conn->query($cs1);

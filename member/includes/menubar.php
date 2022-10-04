@@ -31,9 +31,10 @@
         ?>
         <li class="header">MANAGE</li>                
         <li><a href="propose_form.php"><i class="fa fa-calendar-check-o"></i> <span>แบบฟอร์มเสนอรายชื่อนิสิต</span></a></li>
-        <li><a href="approval_form.php"><i class="fa fa-calendar-check-o"></i> <span>ใบสำคัญรับเงิน (รายเดือน)</span></a></li>
+        <li><a href="receipt_form.php"><i class="fa fa-calendar-check-o"></i> <span>ใบสำคัญรับเงิน (รายเดือน)</span></a></li>
+        <!-- <li><a href="approval_form.php"><i class="fa fa-calendar-check-o"></i> <span>ใบสำคัญรับเงิน (รายเดือน) Test</span></a></li> -->
         <!-- <li><a href="approval_group.php"><i class="fa fa-users"></i> <span>นิสิตในหน่วยงาน</span></a></li>         -->
-        <li><a href="approval_dept.php"><i class="fa fa-building-o"></i> <span>ข้อมูลหน่วยงาน</span></a></li>
+        <!-- <li><a href="approval_dept.php"><i class="fa fa-building-o"></i> <span>ข้อมูลหน่วยงาน</span></a></li> -->
         <?php
         }
         ?> 
@@ -52,6 +53,7 @@
         <!-- <li><a href="otdata.php"><i class="fa fa-upload"></i> <span>นำเข้าข้อมูล</span></a></li> -->
         <!-- <li><a href="otdata_calculate.php"><i class="fa fa-gears"></i> <span>คำนวณเวลาทำงาน</span></a></li> -->
         <li><a href="order_form.php"><i class="fa fa-file-o"></i> <span>คำสั่งผู้ช่วยสอน</span></a></li>
+        <!-- <li><a href="sum_approval.php"><i class="fa fa-tasks"></i> <span>สรุปข้อมูลการขอทุน</span></a></li>    -->
         <?php
         }else{
           if($_SESSION["deptid"]!='101'){
@@ -69,9 +71,9 @@
         if($_SESSION["deptid"]=='99' || $_SESSION["deptid"]=='101'){
         ?>
         <li class="header">REPORT</li>        
-        <li><a href="sum_otdata_monthly.php"><i class="fa fa-bar-chart"></i> <span>สรุปการจ่ายเงินแต่ละเดือน</span></a></li>
+        <!-- <li><a href="sum_otdata_monthly.php"><i class="fa fa-bar-chart"></i> <span>สรุปการจ่ายเงินแต่ละเดือน</span></a></li>
         <li><a href="sum_otdata_dept.php"><i class="fa fa-bar-chart"></i> <span>สรุปการจ่ายเงินแต่ละหน่วยงาน</span></a></li>
-        <li><a href="sum_otdata_fiscal.php"><i class="fa fa-bar-chart"></i> <span>สรุปการจ่ายเงินตามปีงบประมาณ</span></a></li>
+        <li><a href="sum_otdata_fiscal.php"><i class="fa fa-bar-chart"></i> <span>สรุปการจ่ายเงินตามปีงบประมาณ</span></a></li> -->
         <!-- <li class="header">Data Studio</li>        
         <li><a href="https://datastudio.google.com/reporting/6cec3ef8-5e2c-4549-8407-731d8127a7fb/page/9JWtB" target="_blank"><i class="fa fa-bar-chart"></i> <span>สรุปการจ่ายเงินตามปีงบประมาณ</span></a></li> -->
         <?php  

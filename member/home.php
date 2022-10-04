@@ -2,10 +2,41 @@
 <?php 
   include '../timezone.php'; 
   $today = date('Y-m-d');
-  $year = date('Y');
-  if(isset($_GET['year'])){
-    $year = $_GET['year'];
+  $curYear = date('Y')+543;
+  $curMonth = date('n');
+
+  // echo $curYear." ".$curMonth;
+  // if(isset($_GET['year'])){
+  //   $year = $_GET['year'];
+  // }
+  $sql = "select fiscal_id, fiscal_name from fiscal where fiscal_name = '".$curYear."'  order by fiscal_name DESC;";
+  $query = $conn->query($sql);
+  $yrow = $query->fetch_assoc();
+  $fiscal_id = $yrow["fiscal_id"];
+
+  $sem1 = array(6,7,8,9,10,11);
+  $sem2 = array(1,2,3,4,5,12);
+
+  if (in_array($curMonth, $sem1))
+  {
+    $sem_id = 1;
   }
+
+  if (in_array($curMonth, $sem2))
+  {
+    $sem_id = 2;
+  }
+
+  $month_id = $curMonth;
+
+  // echo $fiscal_id." ".$sem_id." ".$curMonth;
+  $sqlCondition = "";
+  if($_SESSION["deptid"]=='99'){
+    $sqlCondition.=" WHERE a.fiscal_id='".$fiscal_id."' AND a.sem_id='".$sem_id."' ";
+  }else{
+    $sqlCondition.=" WHERE a.fiscal_id='".$fiscal_id."' AND a.sem_id='".$sem_id."' AND a.dept_id='".$_SESSION["deptid"]."' ";
+  }
+
 ?>
 <?php include 'includes/header.php'; ?>
 <body class="hold-transition skin-blue sidebar-mini">
@@ -56,13 +87,13 @@
 
       <!-- /.row -->
       <?php
-      if($_SESSION["deptid"]=='99'){
+      // if($_SESSION["deptid"]=='99' || $_SESSION["deptid"]=='11'){
       ?>
       <div class="row">
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header with-border">
-              <h3 class="box-title">แบบฟอร์มขออนุมัติเบิกเงินทุนผู้ช่วยสอน (รายเดือน)</h3>
+              <h3 class="box-title">รายชื่อนิสิตเบิกเงินทุนผู้ช่วยสอน (เดือน<?php echo MonthThai($month_id);?>)</h3>
               <div class="box-tools pull-right">
                 <!-- <form class="form-inline">
                   <div class="form-group">
@@ -87,7 +118,7 @@
                 <div id="legend" class="text-center"></div>
                 <canvas id="barChart" style="height:350px"></canvas>
               </div> -->
-              <table id="example6" class="table table-bordered" width="100%">
+              <table id="propose" class="table table-bordered" width="100%">
                 <thead>
                   <th class="hidden"></th>
                   <th width="3%">#</th>                  
@@ -121,362 +152,34 @@
                     //   ORDER BY a.app_month DESC, CONVERT(dept_name USING tis620), a.app_type_id";
                     // }
                     // $query = $conn->query($sql);
-                    // $i=1;
-                    // while($row = $query->fetch_assoc()){                      
-                    //   if($row['app_status']==0){
-                    //     $strStatus = "<font color='#f39c12'>รอการอนุมัติ</font>";
-                    //   }else{
-                    //     $strStatus = "<font color='#00a65a'>ผ่านการอนุมัติ</font>";
-                    //   }
-                    //   if($_SESSION["deptid"]=='99'){
-                    //     echo "
-                    //       <tr>
-                    //         <td class='hidden'></td>
-                    //         <td>".$row['year_name']."</td>                          
-                    //         <td>".$thaimonth[$row['app_month']-1]." ".$row['year_name']."</td>                          
-                    //         <td>".$row['dept_name']."</td>                          
-                    //         <td>".$row['app_type_name']."</td>
-                    //         <td>".$strStatus."</td>
-                    //         <td>".DateShortThai($row['create_date'])."</td>                          
-                    //         <td>
-                    //           <button class='btn btn-info btn-sm btn-flat' onclick='location.href=\"approval_view.php?appid=".$row['app_id']."\"' ><i class='fa fa-thumbs-up'></i> ยืนยันแบบฟอร์ม</button>
-                    //           <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=".$row['app_id']."\"' ><i class='fa fa-users'></i> เพิ่มชื่อเจ้าหน้าที่</button>
-                    //           <button class='btn btn-success btn-sm btn-flat edit' data-id='".$row['app_id']."'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
-                    //           <button class='btn btn-danger btn-sm btn-flat delete' data-id='".$row['app_id']."'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
-                    //         </td>
-                    //       </tr>
-                    //     ";
-                    //   }else{
-                    //     if($row['app_status']==0){
-                    //       echo "
-                    //       <tr>
-                    //         <td class='hidden'></td>
-                    //         <td>".$row['year_name']."</td>                          
-                    //         <td>".$thaimonth[$row['app_month']-1]." ".$row['year_name']."</td>                          
-                    //         <td>".$row['dept_name']."</td>                          
-                    //         <td>".$row['app_type_name']."</td>
-                    //         <td>".$strStatus."</td>
-                    //         <td>".DateShortThai($row['create_date'])."</td>                          
-                    //         <td>                        
-                    //           <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=".$row['app_id']."\"' ><i class='fa fa-users'></i> เพิ่มชื่อเจ้าหน้าที่</button>
-                    //           <button class='btn btn-success btn-sm btn-flat edit' data-id='".$row['app_id']."'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
-                    //           <button class='btn btn-danger btn-sm btn-flat delete' data-id='".$row['app_id']."'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
-                    //         </td>
-                    //       </tr>
-                    //       ";
-                    //     }else{
-                    //       echo "
-                    //       <tr>
-                    //         <td class='hidden'></td>
-                    //         <td>".$row['year_name']."</td>                          
-                    //         <td>".$thaimonth[$row['app_month']-1]." ".$row['year_name']."</td>                          
-                    //         <td>".$row['dept_name']."</td>                          
-                    //         <td>".$row['app_type_name']."</td>
-                    //         <td>".$strStatus."</td>
-                    //         <td>".DateShortThai($row['create_date'])."</td>                          
-                    //         <td>
-                    //         <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval_view.php?appid=".$row['app_id']."\"' ><i class='fa fa-users'></i> ดูชื่อเจ้าหน้าที่</button>
-                    //         </td>
-                    //       </tr>
-                    //       ";
-                    //     }
-                    //   }
 
-                    //   $i++;
-                    // }
-                    // echo "
-                    //       <tr>
-                    //         <td class='hidden'></td>
-                    //         <td>2565</td>                          
-                    //         <td>".$thaimonth[6]." 2565</td>        
-                    //         <td></td>                                            
-                    //         <td>ภาควิชาวิศวกรรมการบินและอวกาศ</td>                          
-                    //         <td>".DateShortThai('2022-06-13')."</td>                          
-                    //         <td>                        
-                    //           <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=1\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
-                    //           <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
-                    //           <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
-                    //         </td>
-                    //       </tr>
-                    //       ";
-                    // echo "
-                    //       <tr>
-                    //         <td class='hidden'></td>
-                    //         <td>2565</td>                          
-                    //         <td>".$thaimonth[6]." 2565</td>                      
-                    //         <td></td>                                                
-                    //         <td>ภาควิชาวิศวกรรมเครื่องกล</td>                          
-                    //         <td>".DateShortThai('2022-06-13')."</td>                          
-                    //         <td>                        
-                    //           <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=1\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
-                    //           <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
-                    //           <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
-                    //         </td>
-                    //       </tr>
-                    //       ";
-                    // echo "
-                    //       <tr>
-                    //         <td class='hidden'></td>
-                    //         <td>2565</td>                          
-                    //         <td>".$thaimonth[6]." 2565</td>                      
-                    //         <td></td>                                                
-                    //         <td>ภาควิชาวิศวกรรมเคมี</td>                          
-                    //         <td>".DateShortThai('2022-06-13')."</td>                          
-                    //         <td>                        
-                    //           <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=1\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
-                    //           <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
-                    //           <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
-                    //         </td>
-                    //       </tr>
-                    //       ";
-                    // echo "
-                    //       <tr>
-                    //         <td class='hidden'></td>
-                    //         <td>2565</td>                          
-                    //         <td>".$thaimonth[6]." 2565</td>                      
-                    //         <td></td>                                                
-                    //         <td>ภาควิชาวิศวกรรมคอมพิวเตอร์</td>                          
-                    //         <td>".DateShortThai('2022-06-13')."</td>                          
-                    //         <td>                        
-                    //           <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=1\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
-                    //           <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
-                    //           <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
-                    //         </td>
-                    //       </tr>
-                    //       ";
-                    // echo "
-                    //       <tr>
-                    //         <td class='hidden'></td>
-                    //         <td>2565</td>                          
-                    //         <td>".$thaimonth[6]." 2565</td>                      
-                    //         <td></td>                                                
-                    //         <td>ภาควิชาวิศวกรรมไฟฟ้า</td>                          
-                    //         <td>".DateShortThai('2022-06-13')."</td>                          
-                    //         <td>                        
-                    //           <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=1\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
-                    //           <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
-                    //           <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
-                    //         </td>
-                    //       </tr>
-                    //       ";
-                    // echo "
-                    //       <tr>
-                    //         <td class='hidden'></td>
-                    //         <td>2565</td>                          
-                    //         <td>".$thaimonth[6]." 2565</td>                      
-                    //         <td></td>                                                
-                    //         <td>ภาควิชาวิศวกรรมทรัพยากรน้ำ</td>                          
-                    //         <td>".DateShortThai('2022-06-13')."</td>                          
-                    //         <td>                        
-                    //           <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=1\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
-                    //           <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
-                    //           <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
-                    //         </td>
-                    //       </tr>
-                    //       ";
-                    // echo "
-                    //       <tr>
-                    //         <td class='hidden'></td>
-                    //         <td>2565</td>                          
-                    //         <td>".$thaimonth[6]." 2565</td>                      
-                    //         <td></td>                                                
-                    //         <td>ภาควิชาวิศวกรรมโยธา</td>                          
-                    //         <td>".DateShortThai('2022-06-13')."</td>                          
-                    //         <td>                        
-                    //           <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=1\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
-                    //           <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
-                    //           <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
-                    //         </td>
-                    //       </tr>
-                    //       ";  
-                    // echo "
-                    //       <tr>
-                    //         <td class='hidden'></td>
-                    //         <td>2565</td>                          
-                    //         <td>".$thaimonth[6]." 2565</td>                      
-                    //         <td></td>                                                
-                    //         <td>ภาควิชาวิศวกรรมสิ่งแวดล้อม</td>                          
-                    //         <td>".DateShortThai('2022-06-13')."</td>                          
-                    //         <td>                        
-                    //           <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=1\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
-                    //           <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
-                    //           <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
-                    //         </td>
-                    //       </tr>
-                    //       ";
-                    // echo "
-                    //       <tr>
-                    //         <td class='hidden'></td>
-                    //         <td>2565</td>                          
-                    //         <td>".$thaimonth[6]." 2565</td>                      
-                    //         <td></td>                                                
-                    //         <td>ภาควิชาวิศวกรรมอุตสาหการ</td>                          
-                    //         <td>".DateShortThai('2022-06-13')."</td>                          
-                    //         <td>                        
-                    //           <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=1\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
-                    //           <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
-                    //           <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
-                    //         </td>
-                    //       </tr>
-                    //       ";
-                    // echo "
-                    //       <tr>
-                    //         <td class='hidden'></td>
-                    //         <td>2565</td>                          
-                    //         <td>".$thaimonth[6]." 2565</td>                      
-                    //         <td></td>                                                
-                    //         <td>ภาควิชาวิศวกรรมวัสดุ</td>                          
-                    //         <td>".DateShortThai('2022-06-13')."</td>                          
-                    //         <td>                        
-                    //           <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=1\"' ><i class='fa fa-users'></i> เพิ่มชื่อนิสิต</button>
-                    //           <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขแบบฟอร์ม</button>
-                    //           <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบแบบฟอร์ม</button>
-                    //         </td>
-                    //       </tr>
-                    //       "; 
-                    echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>2565</td>                          
-                            <td>".$thaimonth[6]." 2565</td>        
-                            <td></td>                                            
-                            <td>ภาควิชาวิศวกรรมการบินและอวกาศ</td>                          
-                            <td>".DateShortThai('2022-06-13')."</td>                          
-                            <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=1\"' ><i class='fa fa-users'></i> แสดงรายชื่อนิสิต</button>
-                            </td>
-                          </tr>
-                          ";
-                    echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>2565</td>                          
-                            <td>".$thaimonth[6]." 2565</td>                      
-                            <td></td>                                                
-                            <td>ภาควิชาวิศวกรรมเครื่องกล</td>                          
-                            <td>".DateShortThai('2022-06-13')."</td>                          
-                            <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=2\"' ><i class='fa fa-users'></i> แสดงรายชื่อนิสิต</button>
-                            </td>
-                          </tr>
-                          ";
-                    echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>2565</td>                          
-                            <td>".$thaimonth[6]." 2565</td>                      
-                            <td></td>                                                
-                            <td>ภาควิชาวิศวกรรมเคมี</td>                          
-                            <td>".DateShortThai('2022-06-13')."</td>                          
-                            <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=3\"' ><i class='fa fa-users'></i> แสดงรายชื่อนิสิต</button>
-                            </td>
-                          </tr>
-                          ";
-                    echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>2565</td>                          
-                            <td>".$thaimonth[6]." 2565</td>                      
-                            <td></td>                                                
-                            <td>ภาควิชาวิศวกรรมคอมพิวเตอร์</td>                          
-                            <td>".DateShortThai('2022-06-13')."</td>                          
-                            <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=4\"' ><i class='fa fa-users'></i> แสดงรายชื่อนิสิต</button>
-                            </td>
-                          </tr>
-                          ";
-                    echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>2565</td>                          
-                            <td>".$thaimonth[6]." 2565</td>                      
-                            <td></td>                                                
-                            <td>ภาควิชาวิศวกรรมไฟฟ้า</td>                          
-                            <td>".DateShortThai('2022-06-13')."</td>                          
-                            <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=5\"' ><i class='fa fa-users'></i> แสดงรายชื่อนิสิต</button>
-                            </td>
-                          </tr>
-                          ";
-                    echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>2565</td>                          
-                            <td>".$thaimonth[6]." 2565</td>                      
-                            <td></td>                                                
-                            <td>ภาควิชาวิศวกรรมทรัพยากรน้ำ</td>                          
-                            <td>".DateShortThai('2022-06-13')."</td>                          
-                            <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=6\"' ><i class='fa fa-users'></i> แสดงรายชื่อนิสิต</button>
-                            </td>
-                          </tr>
-                          ";
-                    echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>2565</td>                          
-                            <td>".$thaimonth[6]." 2565</td>                      
-                            <td></td>                                                
-                            <td>ภาควิชาวิศวกรรมโยธา</td>                          
-                            <td>".DateShortThai('2022-06-13')."</td>                          
-                            <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=7\"' ><i class='fa fa-users'></i> แสดงรายชื่อนิสิต</button>
-                            </td>
-                          </tr>
-                          ";  
-                    echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>2565</td>                          
-                            <td>".$thaimonth[6]." 2565</td>                      
-                            <td></td>                                                
-                            <td>ภาควิชาวิศวกรรมสิ่งแวดล้อม</td>                          
-                            <td>".DateShortThai('2022-06-13')."</td>                          
-                            <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=8\"' ><i class='fa fa-users'></i> แสดงรายชื่อนิสิต</button>
-                            </td>
-                          </tr>
-                          ";
-                    echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>2565</td>                          
-                            <td>".$thaimonth[6]." 2565</td>                      
-                            <td></td>                                                
-                            <td>ภาควิชาวิศวกรรมอุตสาหการ</td>                          
-                            <td>".DateShortThai('2022-06-13')."</td>                          
-                            <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=9\"' ><i class='fa fa-users'></i> แสดงรายชื่อนิสิต</button>
-                            </td>
-                          </tr>
-                          ";
-                    echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>2565</td>                          
-                            <td>".$thaimonth[6]." 2565</td>                      
-                            <td></td>                                                
-                            <td>ภาควิชาวิศวกรรมวัสดุ</td>                          
-                            <td>".DateShortThai('2022-06-13')."</td>                          
-                            <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=10\"' ><i class='fa fa-users'></i> แสดงรายชื่อนิสิต</button>
-                            </td>
-                          </tr>
-                          "; 
-                    echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>2565</td>                          
-                            <td>".$thaimonth[6]." 2565</td>                      
-                            <td></td>                                                
-                            <td>ส่วนกลางคณะฯ</td>                          
-                            <td>".DateShortThai('2022-06-13')."</td>                          
-                            <td>                        
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"approval.php?appid=11\"' ><i class='fa fa-users'></i> แสดงรายชื่อนิสิต</button>
-                            </td>
-                          </tr>
-                          ";     
+                    $sql = "SELECT a.*, d.dept_name, f.fiscal_name, s.sem_name
+                              FROM approval a 
+                                  LEFT JOIN ta_dept d ON d.dept_id=a.dept_id 
+                                  LEFT JOIN fiscal f ON f.fiscal_id=a.fiscal_id
+                                  LEFT JOIN ta_sem s ON s.sem_id=a.sem_id
+                            ".$sqlCondition."
+                              ORDER BY a.app_times ASC, CONVERT(dept_name USING tis620)";
+                    // echo $sql; 
+                    $query = $conn->query($sql);
+                    $i=1;
+                    while($row = $query->fetch_assoc()){
+                      echo "
+                      <tr>
+                        <td class='hidden'></td>
+                        <td>ปีการศึกษา ".$row['fiscal_name']." ".$row['sem_name']."</td>                                                      
+                        <td></td>         
+                        <td style='text-align:center'>ครั้งที่ ".$row['app_times']." เดือน ".MonthThai($month_id)."</td>         
+                        <td>".$row['dept_name']."</td>                          
+                        <td>".DateShortThai($row['start_date'])."</td>                                                  
+                        <td>                        
+                          <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"receipt.php?appid=".$row['app_id']."&month=".$month_id."\"' ><i class='fa fa-users'></i> ดูรายชื่อนิสิต</button>                                                    
+                        </td>
+                      </tr>
+                      ";                                        
+                      $i++;
+                    }
+                    $query->free_result();                     
                   ?>
                   
                 </tbody>
@@ -486,7 +189,7 @@
         </div>
       </div>
       <?php
-      }
+      // }
       ?>
       </section>
       <!-- right col -->
@@ -498,27 +201,27 @@
 
 <!-- Chart Data -->
 <?php
-  $and = 'AND YEAR(date) = '.$year;
-  $months = array();
-  $ontime = array();
-  $late = array();
-  for( $m = 1; $m <= 12; $m++ ) {
-    $sql = "SELECT * FROM attendance WHERE MONTH(date) = '$m' AND status = 1 $and";
-    $oquery = $conn->query($sql);
-    array_push($ontime, $oquery->num_rows);
+  // $and = 'AND YEAR(date) = '.$year;
+  // $months = array();
+  // $ontime = array();
+  // $late = array();
+  // for( $m = 1; $m <= 12; $m++ ) {
+  //   $sql = "SELECT * FROM attendance WHERE MONTH(date) = '$m' AND status = 1 $and";
+  //   $oquery = $conn->query($sql);
+  //   array_push($ontime, $oquery->num_rows);
 
-    $sql = "SELECT * FROM attendance WHERE MONTH(date) = '$m' AND status = 0 $and";
-    $lquery = $conn->query($sql);
-    array_push($late, $lquery->num_rows);
+  //   $sql = "SELECT * FROM attendance WHERE MONTH(date) = '$m' AND status = 0 $and";
+  //   $lquery = $conn->query($sql);
+  //   array_push($late, $lquery->num_rows);
 
-    $num = str_pad( $m, 2, 0, STR_PAD_LEFT );
-    $month =  date('M', mktime(0, 0, 0, $m, 1));
-    array_push($months, $month);
-  }
+  //   $num = str_pad( $m, 2, 0, STR_PAD_LEFT );
+  //   $month =  date('M', mktime(0, 0, 0, $m, 1));
+  //   array_push($months, $month);
+  // }
 
-  $months = json_encode($months);
-  $late = json_encode($late);
-  $ontime = json_encode($ontime);
+  // $months = json_encode($months);
+  // $late = json_encode($late);
+  // $ontime = json_encode($ontime);
 
 ?>
 <!-- End Chart Data -->

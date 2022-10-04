@@ -2,14 +2,26 @@
 <?php include 'includes/header.php'; ?>
 
 <?php
+    // $app_id = $_GET["appid"];
+    // $sql = "SELECT a.*, y.year_name 
+    //         FROM approval a
+    //         LEFT JOIN years y ON y.year_id=a.year_id 
+    //         WHERE app_id = '$app_id'
+    //         ;";
+    // $query = $conn->query($sql);
+    // $row = $query->fetch_assoc();
     $app_id = $_GET["appid"];
-    $sql = "SELECT a.*, y.year_name 
+    $sql = "SELECT a.*, DATE_FORMAT(a.create_date, '%c') AS aMonth, DATE_FORMAT(a.create_date, '%Y') AS aYear, f.fiscal_name, d.dept_name, f.fiscal_name, s.sem_name 
             FROM approval a
-            LEFT JOIN years y ON y.year_id=a.year_id 
-            WHERE app_id = '$app_id'
+            LEFT JOIN ta_dept d ON d.dept_id=a.dept_id 
+            LEFT JOIN fiscal f ON f.fiscal_id=a.fiscal_id 
+            LEFT JOIN ta_sem s ON s.sem_id=a.sem_id
+            WHERE a.app_id = '$app_id'
             ;";
     $query = $conn->query($sql);
     $row = $query->fetch_assoc();
+
+    $aYear = $row["aYear"]+543;
 ?>                    
 
 <body class="hold-transition skin-blue sidebar-mini">

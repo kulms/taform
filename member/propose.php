@@ -3,13 +3,17 @@
 
 <?php
     $app_id = $_GET["appid"];
-    $sql = "SELECT a.*, y.year_name 
+    $sql = "SELECT a.*, DATE_FORMAT(a.create_date, '%c') AS aMonth, DATE_FORMAT(a.create_date, '%Y') AS aYear, f.fiscal_name, d.dept_name, f.fiscal_name, s.sem_name 
             FROM approval a
-            LEFT JOIN years y ON y.year_id=a.year_id 
-            WHERE app_id = '$app_id'
+            LEFT JOIN ta_dept d ON d.dept_id=a.dept_id 
+            LEFT JOIN fiscal f ON f.fiscal_id=a.fiscal_id 
+            LEFT JOIN ta_sem s ON s.sem_id=a.sem_id
+            WHERE a.app_id = '$app_id'
             ;";
     $query = $conn->query($sql);
     $row = $query->fetch_assoc();
+
+    $aYear = $row["aYear"]+543;
 ?>                    
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -24,12 +28,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-      กำหนดเจ้าหน้าที่
+      กำหนดชื่อนิสิต
       </h1>
       <ol class="breadcrumb">
         <li><a href="home.php"><i class="fa fa-dashboard"></i> Home</a></li>
         <li><a href="propose_form.php"> แบบฟอร์มขอเงินทุน</a></li>
-        <li class="active">กำหนดนิสิต</li>
+        <li class="active">กำหนดชื่อนิสิต</li>
       </ol>
     </section>
     <!-- Main content -->
@@ -75,95 +79,25 @@
                 </thead>
                 <tbody>
                 <tr>
-                  <td width="12%" class="th-left-color">หน่วยงาน</td>
-                  <td width="38%">
-                    <?php 
-                      switch($app_id){
-                        case "1":
-                            echo "ภาควิชาวิศวกรรมการบินและอวกาศ";
-                          break;
-                        case "2":
-                            echo "ภาควิชาวิศวกรรมเครื่องกล";
-                          break;
-                        case "3":
-                            echo "ภาควิชาวิศวกรรมเคมี";
-                          break;
-                        case "4":
-                            echo "ภาควิชาวิศวกรรมคอมพิวเตอร์";
-                          break;
-                        case "5":
-                            echo "ภาควิชาวิศวกรรมไฟฟ้า";
-                          break;
-                        case "6":
-                            echo "ภาควิชาวิศวกรรมทรัพยากรน้ำ";
-                          break;
-                        case "7":
-                            echo "ภาควิชาวิศวกรรมโยธา";
-                          break;
-                        case "8":
-                            echo "ภาควิชาวิศวกรรมสิ่งแวดล้อม";
-                          break;
-                        case "9":
-                            echo "ภาควิชาวิศวกรรมอุตสาหการ";
-                          break;
-                        case "10":
-                            echo "ภาควิชาวิศวกรรมวัสดุ";
-                          break;
-                        case "11":
-                            echo "ส่วนกลางคณะฯ";
-                          break;
-                        case "12":
-                            echo "ภาควิชาวิศวกรรมการบินและอวกาศ";
-                          break;
-                        case "13":
-                            echo "ภาควิชาวิศวกรรมเครื่องกล";
-                          break;
-                        case "14":
-                            echo "ภาควิชาวิศวกรรมเคมี";
-                          break;
-                        case "15":
-                            echo "ภาควิชาวิศวกรรมคอมพิวเตอร์";
-                          break;
-                        case "16":
-                            echo "ภาควิชาวิศวกรรมไฟฟ้า";
-                          break;
-                        case "17":
-                            echo "ภาควิชาวิศวกรรมทรัพยากรน้ำ";
-                          break;
-                        case "18":
-                            echo "ภาควิชาวิศวกรรมโยธา";
-                          break;
-                        case "19":
-                            echo "ภาควิชาวิศวกรรมสิ่งแวดล้อม";
-                          break;
-                        case "20":
-                            echo "ภาควิชาวิศวกรรมอุตสาหการ";
-                          break;
-                        case "21":
-                            echo "ภาควิชาวิศวกรรมวัสดุ";
-                          break;
-                        case "22":
-                            echo "ส่วนกลางคณะฯ";
-                          break;
-                      }
-                      
-                    ?>
-                  </td>                  
-                  <td width="12%" >&nbsp;</td>
-                  <td width="38%"><?php //echo $row["app_doc_no"];?></td>
+                  <td width="12%" class="th-left-color">ปีการศึกษา</td>
+                  <td width="38%"><?php echo $row["fiscal_name"];?></td>                  
+                  <td width="12%" class="th-left-color">ภาคการศึกษา</td>
+                  <td width="38%"><?php echo $row["sem_name"];?></td>
                 </tr>                                                
                 <tr>
-                  <td class="th-left-color">วันที่สร้างเอกสาร</td>
-                  <td><?php echo DateThai('2022-06-13');?></td>                  
+                  <td class="th-left-color">ครั้งที่</td>
+                  <td><?php echo $row["app_times"];?></td>                                  
+                  <td class="th-left-color">หน่วยงาน</td>
+                  <td><?php echo $row["dept_name"];?></td>                  
+                </tr> 
+                <tr>
                   <td class="th-left-color">เดือนที่ขออนุมัติ</td>
-                  <td><?php echo MonthThai(6)." 2565";?></td>                  
+                  <td><?php echo MonthThai($row["aMonth"])." ".$aYear;?></td>                    
+                  <td class="th-left-color">วันที่สร้างเอกสาร</td>
+                  <td><?php echo DateThai($row["create_date"]);?></td>                                    
                 </tr>                
-                <!-- <tr>
-                  <td class="th-left-color">ชื่อหัวหน้างาน</td>
-                  <td>(<?php echo $row["app_head"];?>)</td>                                  
-                  <td class="th-left-color">ตำแหน่งหัวหน้างาน</td>
-                  <td>ตำแหน่ง <?php echo $row["app_head_position"];?></td>                  
-                </tr>                
+                               
+                <!--
                 <tr>
                   <td class="th-left-color">วงเงิน (ตัวเลข)</td>
                   <td><?php echo number_format($row["budget"],2);?> บาท</td>                                  
@@ -285,349 +219,32 @@
                     //   }
                     //   $i++;
                     // }
-                    switch ($app_id) {
-                      case "1":
-                        echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>1</td>
-                            <td>นายกิตติภณ ฝ่ายเดช</td>
-                            <td></td>                          
-                            <td>ปริญญาตรี</td>
-                            <td>3</td>
-                            <td>2,505</td>
-                            <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=1&appid=1&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
-                            </td>
-                          </tr>
-                        ";
-                        echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>2</td>
-                            <td>นางสาวสโรชา เจตะวัฒนะ</td>
-                            <td></td>                          
-                            <td>ปริญญาตรี</td>
-                            <td>3</td>
-                            <td>2,505</td>
-                            <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=2&appid=1&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
-                            </td>
-                          </tr>
-                        ";
-                        echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>3</td>
-                            <td>นางสาวนวลพรรณ ชัยศร</td>
-                            <td></td>                          
-                            <td>ปริญญาตรี</td>
-                            <td>4</td>
-                            <td>2,505</td>
-                            <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=3&appid=1&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
-                            </td>
-                          </tr>
-                        ";
-                        echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>4</td>
-                            <td>นายปิติพล เกื้อกูล</td>
-                            <td></td>                          
-                            <td>ปริญญาตรี</td>
-                            <td>4</td>
-                            <td>2,505</td>
-                            <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=4&appid=1&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
-                            </td>
-                          </tr>
-                        ";
-                        echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>5</td>
-                            <td>นายโชติพัชร กสิกรรม</td>
-                            <td></td>                          
-                            <td>ปริญญาตรี</td>
-                            <td>4</td>
-                            <td>2,505</td>
-                            <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=5&appid=1&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
-                            </td>
-                          </tr>
-                        ";
-                      break;
-                      case "2":
-                        echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>1</td>
-                            <td>นายพลาวัสถ์ ส่งพันธ์นธีกูร</td>
-                            <td></td>                          
-                            <td>ปริญญาโท</td>
-                            <td>4</td>
-                            <td>3,340</td>
-                            <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=6&appid=2&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
-                            </td>
-                          </tr>
-                        ";
-                        echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>2</td>
-                            <td>นายสุรงค์กร  เพชรรักษ์</td>
-                            <td></td>                          
-                            <td>ปริญญาเอก</td>
-                            <td>2</td>
-                            <td>3,340</td>
-                            <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=7&appid=2&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
-                            </td>
-                          </tr>
-                        ";
-                        echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>3</td>
-                            <td>นางสาววาริณีย์  สุวรรณรักษ์</td>
-                            <td></td>                          
-                            <td>ปริญญาโท</td>
-                            <td>2</td>
-                            <td>3,340</td>
-                            <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=8&appid=2&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
-                            </td>
-                          </tr>
-                        ";
-                        echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>4</td>
-                            <td>นายวุส  ทาแก้ว</td>
-                            <td></td>                          
-                            <td>ปริญญาโท</td>
-                            <td>2</td>
-                            <td>3,340</td>
-                            <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=9&appid=2&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
-                            </td>
-                          </tr>
-                        ";
-                        echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>5</td>
-                            <td>นายภคนันท์  วัฒนสินบำรุง</td>
-                            <td></td>                          
-                            <td>ปริญญาเอก</td>
-                            <td>1</td>
-                            <td>3,340</td>
-                            <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=10&appid=2&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
-                            </td>
-                          </tr>
-                        ";                      
+                    $sql = "SELECT *, approval_std.app_std_id AS appsid
+                            FROM approval_std                            
+                            WHERE approval_std.app_id=$app_id
+                            ;";
+                    $query = $conn->query($sql);
+                    $i=1;
+                    while($row = $query->fetch_assoc()){
                       echo "
                           <tr>
                             <td class='hidden'></td>
-                            <td>6</td>
-                            <td>นายฐิติศักดิ์  อัศวรางกูร</td>
-                            <td></td>                          
-                            <td>ปริญญาโท</td>
-                            <td>3</td>
-                            <td>3,340</td>
+                            <td>".$i."</td>
+                            <td>".$row['std_title_name'].$row['std_name']."</td>
+                            <td>".$row['std_id']."</td>                          
+                            <td>".$row['std_degree']."</td>
+                            <td>".$row['std_class']."</td>
+                            <td>".$row['std_amount']."</td>
                             <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=11&appid=2&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
-                            </td>
-                          </tr>
-                        ";                     
-                      echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>7</td>
-                            <td>นายเอื้ออังกูร  มูลรังษี</td>
-                            <td></td>                          
-                            <td>ปริญญาโท</td>
-                            <td>2</td>
-                            <td>3,340</td>
-                            <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=12&appid=2&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
-                            </td>
-                          </tr>
-                        ";                      
-                      echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>8</td>
-                            <td>นายกฤษฎิ์  ใหม่เอี่ยม</td>
-                            <td></td>                          
-                            <td>ปริญญาโท</td>
-                            <td>2</td>
-                            <td>3,340</td>
-                            <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=13&appid=2&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
-                            </td>
-                          </tr>
-                        ";                      
-                      echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>9</td>
-                            <td>นายพัชรากร  ศิริโยทัย</td>
-                            <td></td>                          
-                            <td>ปริญญาเอก</td>
-                            <td>1</td>
-                            <td>3,340</td>
-                            <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=14&appid=2&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
+                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_std.php?appsid=".$row['appsid']."&appid=".$row['app_id']."\"' ><i class='fa fa-file-text-o'></i> ข้อมูลรายวิชาที่ช่วยสอน</button>
+                              <button class='btn btn-success btn-sm btn-flat edit' data-id='".$row['appsid']."'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
+                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='".$row['appsid']."'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
                             </td>
                           </tr>
                         ";
-                        echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>10</td>
-                            <td>นางสาวศนทกานต์  เหลืองวิเศษ</td>
-                            <td></td>                          
-                            <td>ปริญญาโท</td>
-                            <td>3</td>
-                            <td>3,340</td>
-                            <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=15&appid=2&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
-                            </td>
-                          </tr>
-                        ";
-                        echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>11</td>
-                            <td>นายณัฐพงษ์  พรมพิทักษ์</td>
-                            <td></td>                          
-                            <td>ปริญญาโท</td>
-                            <td>2</td>
-                            <td>3,340</td>
-                            <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=16&appid=2&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
-                            </td>
-                          </tr>
-                        ";
-                        echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>12</td>
-                            <td>นางสาวฑิฆันพร  จิตภักดี</td>
-                            <td></td>                          
-                            <td>ปริญญาโท</td>
-                            <td>4</td>
-                            <td>3,340</td>
-                            <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=17&appid=2&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
-                            </td>
-                          </tr>
-                        ";
-                        echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>13</td>
-                            <td>นางสาวพิมพ์นิภา  อุมัยชัย</td>
-                            <td></td>                          
-                            <td>ปริญญาโท</td>
-                            <td>1</td>
-                            <td>3,340</td>
-                            <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=18&appid=2&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
-                            </td>
-                          </tr>
-                        ";                      
-                      echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>14</td>
-                            <td>นายอาณกร  ทองบาง</td>
-                            <td></td>                          
-                            <td>ปริญญาโท</td>
-                            <td>1</td>
-                            <td>3,340</td>
-                            <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=19&appid=2&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
-                            </td>
-                          </tr>
-                        ";                     
-                      echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>15</td>
-                            <td>นายสิทธ์ชัย  ปัทมารัตน์</td>
-                            <td></td>                          
-                            <td>ปริญญาตรี</td>
-                            <td>4</td>
-                            <td>2,505</td>
-                            <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=20&appid=2&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
-                            </td>
-                          </tr>
-                        ";                      
-                      echo "
-                          <tr>
-                            <td class='hidden'></td>
-                            <td>16</td>
-                            <td>นายจิระศักดิ์  แซ่ตัน</td>
-                            <td></td>                          
-                            <td>ปริญญาโท</td>
-                            <td>2</td>
-                            <td>3,340</td>
-                            <td>
-                              <button class='btn btn-warning btn-sm btn-flat' onclick='location.href=\"propose_ot.php?appeid=21&appid=2&empid=1\"' ><i class='fa fa-clock-o'></i> เพิ่มข้อมูลรายวิชาที่ช่วยสอน</button>
-                              <button class='btn btn-success btn-sm btn-flat edit' data-id='1'><i class='fa fa-edit'></i> แก้ไขชื่อนิสิต</button>
-                              <button class='btn btn-danger btn-sm btn-flat delete' data-id='1'><i class='fa fa-trash'></i> ลบชื่อนิสิต</button>
-                            </td>
-                          </tr>
-                        ";
-                      break;
-
-                    }
+                      $i++;
+                    }    
+                    $query->free_result();                
                     
                   ?>
                 </tbody>
@@ -673,7 +290,7 @@ function getRow(id){
   //alert(id);
   $.ajax({
     type: 'POST',
-    url: 'approval_row.php',
+    url: 'propose_row.php',
     data: {id:id},
     dataType: 'json',
     success: function(response){
@@ -685,15 +302,39 @@ function getRow(id){
       // $('#employee_name').html(response.firstname+' '+response.lastname);
       // $('#del_attid').val(response.attid);
       // $('#del_employee_name').html(response.firstname+' '+response.lastname);
-      $('#edit_emp_id').val(response.emp_id);
-      $('#edit_reponsibility').val(response.reponsibility);
-      $('#appe_id').val(response.app_emp_id);
-      $('#employee_name').html(response.titlename+response.firstname+' '+response.lastname);
+      $('#app_std_id').val(response.app_std_id);
+      $('#edit_std_id').val(response.std_id);
+      $('#edit_std_title_name').val(response.std_title_name);   
+      $('#edit_std_name').val(response.std_name);   
+      $('#edit_std_degree').val(response.std_degree);   
+      $('#edit_std_class').val(response.std_class);   
+      $('#edit_std_subject').val(response.std_subject);   
+      $('#edit_std_section').val(response.std_section);   
+      $('#edit_std_number').val(response.std_number);   
+      $('#edit_std_amount').val(response.std_amount);   
+      $('#edit_std_gpa').val(response.std_gpa);   
+      $('#edit_std_score').val(response.std_score);   
+      $('#edit_std_bankno').val(response.std_bankno);   
+      $('#edit_std_bankname').val(response.std_bankname);   
+      $('#edit_std_phone').val(response.std_phone);   
 
-      $('#del_emp_id').val(response.emp_id);
-      $('#del_reponsibility').val(response.reponsibility);
-      $('#del_appe_id').val(response.app_emp_id);
-      $('#del_employee_name').html(response.titlename+response.firstname+' '+response.lastname);
+      $('#del_app_std_id').val(response.app_std_id);
+      $('#del_std_id').val(response.std_id);
+      $('#del_std_title_name').val(response.std_title_name);
+      $('#del_std_name').val(response.std_name);   
+      $('#del_std_degree').val(response.std_degree);   
+      $('#del_std_class').val(response.std_class);   
+      $('#del_std_subject').val(response.std_subject);   
+      $('#del_std_section').val(response.std_section);   
+      $('#del_std_number').val(response.std_number);   
+      $('#del_std_amount').val(response.std_amount);   
+      $('#del_std_gpa').val(response.std_gpa);   
+      $('#del_std_score').val(response.std_score);   
+      $('#del_std_bankno').val(response.std_bankno);   
+      $('#del_std_bankname').val(response.std_bankname);   
+      $('#del_std_phone').val(response.std_phone);
+      // $('#del_appe_id').val(response.app_emp_id);
+      // $('#del_employee_name').html(response.titlename+response.firstname+' '+response.lastname);
 
     }
   });

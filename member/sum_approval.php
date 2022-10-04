@@ -232,7 +232,7 @@ window.setTimeout(function() {
       $(this).remove(); 
     });
   }, 2000);
-}
+  
 </script>
 </body>
 </html>
